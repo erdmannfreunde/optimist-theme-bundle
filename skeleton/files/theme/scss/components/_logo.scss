@@ -1,0 +1,24 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/LOGO
+// --------------------------------------------------
+
+// CSS-VARIABLES
+
+// --------------------------------------------------
+
+// company brand
+.logo {
+  pointer-events: auto;
+  padding-bottom: var(--base-spacing-unit);
+
+  img {
+    margin-left: 0;
+    width: 160px;
+  }
+}

@@ -1,0 +1,374 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/NAVIGATION
+// --------------------------------------------------
+
+@import '../../nutshell/scss/components/navs';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --color-navigation-main--active:    var(--color-brand);
+  --nav--main__item-padding:          0.5rem;
+  --nav--main__item-padding--sm:      0.25rem;
+  --nav--main-font-size:              0.875rem;
+  --nav--main-font-weight:            600;
+
+  --submenu-background:               var(--color-page-background);
+
+  --nav-mobile-color-background:      var(--color-page-background);
+  --nav-mobile-color-text:            var(--color-text);
+
+  --menu-icon-width:                  1.25rem;
+  --menu-icon-stroke:                 2px;
+
+  --nav--sub__item-padding:           var(--base-spacing-unit--sm);
+}
+
+// --------------------------------------------------
+
+.nav--right {
+  justify-self: end;
+}
+
+// Main Navigation
+
+.nav--main {
+  line-height: 1em;
+  font-size: var(--nav--main-font-size);
+  color: var(--color-text);
+  position: relative;
+
+  // sass-lint:disable-block force-element-nesting
+  a,
+  a.trail,
+  strong.active,
+  strong.trail,
+  strong.forward {
+    padding: var(--nav--main__item-padding);
+    text-decoration: none;
+    font-weight: var(--nav--main-font-weight);
+    color: var(--color-navigation-main--active);
+
+    @include media-query(screen-menu) {
+      padding: var(--nav--main__item-padding);
+      margin:  var(--nav--main__item-padding);
+    }
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--color-navigation-main--active);
+    }
+  }
+
+  .level_1 {
+    > li {
+      > a,
+      > strong {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .level_2 {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+
+    a,
+    a.trail,
+    strong.active,
+    strong.trail,
+    strong.forward {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    a {
+      opacity: 0.75;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .level_3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+// sass-lint:disable-block no-vendor-prefixes
+.nav--mobile {
+  @include media-query(screen-menu-max) {
+    z-index: -1;
+    visibility: hidden;
+    font-size: var(--base-font-size--xl);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    border-top: var(--base-border);
+    background: var(--nav-mobile-color-background);
+    padding: var(--grid__gutter);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-touch-action: touch;
+    -ms-overflow-style: none;
+    -webkit-transition: opacity 0.3s, visibility 0.3s 0.3s;
+    transition: opacity 0.3s, visibility 0.3s 0.3s;
+
+    .level_1 {
+
+      a,
+      strong {
+        color: var(--nav-mobile-color-text);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block;
+      }
+
+      strong {
+        color: var(--color-navigation-main--active);
+      }
+    }
+
+    .level_2 {
+      position: relative;
+
+      a,
+      strong {
+        &::before {
+          content: '→';
+          margin-right: var(--base-spacing-unit--xs);
+        }
+      }
+    }
+  }
+}
+
+.nav--mobile--active {
+  @include media-query(screen-menu-max) {
+    z-index: 1004;
+    visibility: visible;
+    opacity: 1;
+
+    -webkit-transition: opacity 0.3s;
+
+    transition: opacity 0.3s;
+  }
+}
+
+// button to display mobile navigation
+.nav-toggler {
+  justify-self: end;
+  z-index: 1002;
+  pointer-events: auto;
+  color: var(--color-links);
+  padding-bottom: var(--base-spacing-unit);
+
+  @include media-query(screen-menu) {
+    display: none;
+  }
+}
+
+.nav-toggler__button {
+  background: none;
+  border: none;
+  outline: none;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0;
+  cursor: pointer;
+  color: currentColor;
+  padding: calc(var(--base-spacing-unit--xs)/2) var(--base-spacing-unit--xs);
+  line-height: 1.5;
+
+
+  .menu-icon {
+    position: relative;
+    width: var(--menu-icon-width);
+    height: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .menu-icon__inner {
+    width: 100%;
+    background-color: currentcolor;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    margin-top: calc(var(--menu-icon-stroke) / -2);
+    height: var(--menu-icon-stroke);
+    -webkit-transition: -webkit-transform 0.15s ease;
+    transition: -webkit-transform 0.15s ease;
+    transition: transform 0.15s ease;
+    transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+
+    &::after,
+    &::before {
+      background-color: currentcolor;
+      position: absolute;
+      display: block;
+      content: '';
+      width: 100%;
+      height: var(--menu-icon-stroke);
+      -webkit-transition: opacity 0.15s, -webkit-transform 0.15s ease;
+      transition: opacity 0.15s, -webkit-transform 0.15s ease;
+      transition: transform 0.15s ease, opacity 0.15s;
+      transition: transform 0.15s ease, opacity 0.15s, -webkit-transform 0.15s ease;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      bottom: -6px;
+    }
+
+    .html--fixed & {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        bottom: 0;
+      }
+    }
+  }
+
+  .menu-label {
+    display: inline-block;
+    margin-left: var(--base-spacing-unit--xs);
+    font-size: var(--base-font-size--xl);
+  }
+}
+
+.nav--sub {
+  margin-bottom: var(--base-spacing-unit--lg);
+  font-size: var(--base-font-size--xs);
+  position: relative;
+  z-index: 1000;
+
+  &::after {
+    content: '';
+    border-bottom: var(--base-border);
+    display: block;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+  }
+
+  ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-touch-action: auto;
+        touch-action: auto;
+    -ms-overflow-style: none;
+  }
+
+  li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+
+    &.active,
+    &.trail {
+      border-bottom: var(--base-border-width) solid currentcolor;
+    }
+
+    &:hover {
+      border-bottom: var(--base-border-width) solid var(--color-links-hover);
+    }
+  }
+
+  a,
+  strong.active,
+  strong.trail {
+    color: inherit;
+    padding: var(--nav--sub__item-padding);
+  }
+
+  a:hover {
+    color: var(--color-links-hover);
+  }
+}
+
+.nav--meta {
+  justify-self: start;
+  font-family: var(--nav--main-font);
+  font-weight: var(--nav--main-font-weight);
+  font-size: var(--base-font-size--xs);
+
+  ul {
+    display: grid;
+    grid-column-gap: var(--grid__gutter--half);
+
+    @include media-query(screen-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .level_1 {
+    > li {
+      > a,
+      > strong.active,
+      > strong.trail {
+        font-weight: 600;
+        display: block;
+      }
+    }
+  }
+
+  a,
+  strong.active,
+  strong.trail {
+    padding: 0 var(--base-spacing-unit--sm);
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+    padding-left: 0;
+  }
+}
+
+.nav--meta + .nav--meta {
+  justify-self: end;
+}

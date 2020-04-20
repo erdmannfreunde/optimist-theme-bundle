@@ -1,0 +1,30 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/NOTES
+// --------------------------------------------------
+
+// CSS-VARIABLES
+
+// --------------------------------------------------
+
+.footer__note {
+  margin-top: var(--base-spacing-unit);
+  font-size: var(--base-font-size--xs);
+
+  @supports not (display: grid) {
+    width: 100%;
+  }
+
+  @include media-query(screen-lg) {
+    margin-top: var(--base-spacing-unit--lg);
+  }
+
+  a {
+    color: inherit;
+  }
+}

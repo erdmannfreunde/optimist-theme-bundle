@@ -1,0 +1,201 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/HERO
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --hero__color-background: #FFFFFF;
+  --hero__color-text:       var(--color-text);
+  --hero__font-family:      var(--base-font-family);
+  --hero__font-weight:      700;
+}
+
+// --------------------------------------------------
+
+// hero
+// [1] every .inside container has position relative by contao default
+// [2] calculate height based on padding for mod_article, including fallback
+// [3] flexbox fix for IE10 & IE11, see http://caniuse.com/#feat=flexbox
+
+// sass-lint:disable-block force-element-nesting
+.mod_article.hero {
+  @include wrapper-max(none);
+
+  position: relative;
+  padding: 0;
+  z-index: 0;
+
+  > .inside {
+    margin-left: auto;
+    margin-right: auto;
+    position: static; // [1]
+    min-height: inherit;
+
+    @supports not(display: grid) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
+    }
+
+    .ie & {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
+    }
+  }
+}
+
+.ce_hero {
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc(5% - var(--grid__gutter)) repeat(12, 1fr) calc(5% - var(--grid__gutter));
+  grid-column-gap: var(--grid__gutter);
+
+  .image_container {
+    grid-column: 1 / span 14;
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+  }
+
+  .image_container.float_left,
+  .image_container.float_right {
+    grid-row: 1;
+
+    @supports not(display: grid) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .ie & {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  .content_container {
+    grid-column: 2 / span 12;
+    position: relative;
+    z-index: 1000;
+    text-align: left;
+    align-self: center;
+    margin-top: var(--base-spacing-unit);
+    margin-bottom: var(--base-spacing-unit);
+    background: var(--hero__color-background);
+
+    @supports not(display: grid) {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    .ie & {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    @include media-query(screen-md) {
+      grid-column: 2 / span 10;
+    }
+
+    @include media-query(screen-lg) {
+      margin-top: var(--base-spacing-unit--lg);
+      margin-bottom: var(--base-spacing-unit--lg);
+    }
+
+    @include media-query(screen-xl) {
+      grid-column: 2 / span 9;
+      margin-top: var(--base-spacing-unit--xl);
+      margin-bottom: var(--base-spacing-unit--xl);
+    }
+  }
+
+  .float_above + .content_container {
+    grid-row: 2;
+  }
+
+  .float_left + .content_container,
+  .float_right + .content_container {
+    padding: var(--base-spacing-unit);
+    grid-row: 1 / -1;
+
+    @include media-query(screen-sm-max) {
+      margin-top: 50%;
+    }
+
+    @include media-query(screen-lg) {
+      padding: var(--base-spacing-unit--lg);
+    }
+  }
+
+  .float_left + .content_container {
+    @supports not(display: grid) {
+      margin-left: 5%;
+      margin-right: 50%;
+    }
+
+    .ie & {
+      margin-left: 5%;
+      margin-right: 50%;
+    }
+
+    @include media-query(screen-md) {
+      grid-column: 2 / span 7;
+    }
+
+    @include media-query(screen-lg) {
+      grid-column: 2 / span 6;
+    }
+  }
+
+  .float_right + .content_container {
+    @supports not(display: grid) {
+      margin-left: 50%;
+      margin-right: 5%;
+    }
+
+    .ie & {
+      margin-left: 50%;
+      margin-right: 5%;
+    }
+
+
+    @include media-query(screen-md) {
+      grid-column: 7 / span 7;
+    }
+
+    @include media-query(screen-lg) {
+      grid-column: 8 / span 6;
+    }
+  }
+
+  .btn {
+    margin-top: var(--base-spacing-unit);
+    margin-bottom: 0;
+    display: inline-block;
+  }
+}

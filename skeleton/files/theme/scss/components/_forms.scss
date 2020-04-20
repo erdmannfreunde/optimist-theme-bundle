@@ -1,0 +1,82 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/FORMS
+// --------------------------------------------------
+
+@import '../../nutshell/scss/components/forms';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+
+// --------------------------------------------------
+
+// sass-lint:disable-block force-element-nesting
+
+.ce_form {
+  --card-border: none;
+  @include card;
+
+  -webkit-box-shadow: var(--base-box-shadow);
+
+          box-shadow: var(--base-box-shadow); //0 5px 60px rgba(0,0,0,.1);
+  margin-bottom: var(--base-spacing-unit);
+
+  @include media-query(screen-lg) {
+    --card-padding: var(--base-spacing-unit--lg);
+  }
+
+  #{headings()} {
+    @extend %_h4;
+  }
+}
+
+.form--sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--base-spacing-unit);
+}
+
+input.text,
+input.captcha,
+textarea {
+  padding: var(--base-spacing-unit--xs) var(--base-spacing-unit--sm);
+}
+
+input.radio,
+input.checkbox {
+  vertical-align: middle;
+}
+
+.widget-select {
+  select {
+    width: 100%;
+    margin-left: 0;
+    height: calc((1rem * var(--base-line-height)) + var(--base-spacing-unit--sm));
+  }
+}
+
+.widget-radio--list {
+  .radio_container {
+    > span {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+}
+
+.widget-checkbox--list {
+  .checkbox_container {
+    > span {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+
+//
+// BASE/GRID
+// --------------------------------------------------
+
+@import '../../nutshell/scss/base/grid';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --grid__columns:          12;
+  --grid__gutter:           1rem;
+  --grid__gutter--half:     calc(var(--grid__gutter) / 2);
+
+  @include media-query(screen-sm) {
+    --grid__gutter:         1.875rem;
+  }
+}
+// --------------------------------------------------
+
+
+// PUT YOUR OWN GRID STYLES HERE
+.row-gap {
+  grid-row-gap: var(--grid__gutter);
+
+  [class*='col'] {
+    [class*='ce_'],
+    [class*='mod_'] {
+      display: grid;
+      height: 100%;
+    }
+  }
+}
+
+.row-start {
+  -ms-flex-item-align: start;
+      align-self: start;
+}
+
+.row-center {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+

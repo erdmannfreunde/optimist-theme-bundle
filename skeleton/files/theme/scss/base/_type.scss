@@ -1,0 +1,324 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// BASE/TYPE
+// --------------------------------------------------
+
+// SASS-VARIABLES
+$headlines: (
+  h1: (
+    sizes: (
+      xs: 1.75rem,
+      sm: 1.75rem,
+      md: 2.125rem,
+      lg: 2.125rem,
+      xl: 2.25rem
+    ),
+    line-height: 1.25,
+    margin-top: 2rem,
+    margin-bottom: 1.5rem
+  ),
+  h2: (
+    sizes: (
+      xs: 1.625rem,
+      sm: 1.625rem,
+      md: 1.75rem,
+      lg: 1.75rem,
+      xl: 1.875rem
+    ),
+    line-height: 1.25,
+    margin-top: 2rem,
+    margin-bottom: 1.5rem
+  ),
+  h3: (
+    sizes: (
+      xs: 1.375rem,
+      sm: 1.375rem,
+      md: 1.5rem,
+      lg: 1.5rem,
+      xl: 1.5rem
+    ),
+    line-height: 1.25,
+    margin-top: 2rem,
+    margin-bottom: 1rem
+  ),
+  h4: (
+    sizes: (
+      xs: 1.125rem,
+      sm: 1.125rem,
+      md: 1.25rem,
+      lg: 1.25rem,
+      xl: 1.25rem
+    ),
+    line-height: 1.25,
+    margin-top: 1.5rem,
+    margin-bottom: 0.5rem
+  ),
+  h5: (
+    sizes: (
+      xs: 1rem,
+      sm: 1rem,
+      md: 1rem,
+      lg: 1rem,
+      xl: 1rem
+    ),
+    line-height: 1.25,
+    margin-top: 1.5rem,
+    margin-bottom: 0.5rem
+  ),
+  h6: (
+    sizes: (
+      xs: 0.875rem,
+      sm: 0.875rem,
+      md: 0.875rem,
+      lg: 0.875rem,
+      xl: 0.875rem
+    ),
+    line-height: 1.25,
+    margin-top: 1.5rem,
+    margin-bottom: 0
+  ),
+);
+
+// --------------------------------------------------
+
+@import '../../nutshell/scss/base/type';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --color-alert:                          var(--color-brand-primary);
+  --color-alert-border:                   var(--color-brand-primary);
+
+  --color-code-bg:                        var(--color-gray-light);
+
+  // heading
+  --headings__font-family:                var(--base-font-family-1);
+  --headings__font-weight:                600;
+
+  // paragraph
+  --paragraph__link-color:                var(--color-links);
+  --paragraph__link-decoration:           underline;
+  --paragraph__link-decoration--hover:    none;
+
+  // code
+  --code__color:                          var(--color-highlight);
+  --pre__color-background:                var(--color-gray-light);
+  --pre__color:                           var(--color-text);
+}
+
+// --------------------------------------------------
+
+// heading sizes
+// [1] make sure, that only the first headline inside an element or module
+// is styled this way
+.heading--1 {
+  &.ce_headline {
+    @extend %_h1;
+  }
+
+  #{headings()} { // [1]
+    &:first-child {
+      @extend %_h1;
+    }
+  }
+}
+
+.heading--2 {
+  &.ce_headline {
+    @extend %_h2;
+  }
+
+  #{headings()} { // [1]
+    &:first-child {
+      @extend %_h2;
+    }
+  }
+}
+
+.heading--3 {
+  &.ce_headline {
+    @extend %_h3;
+  }
+
+  #{headings()} { // [1]
+    &:first-child {
+      @extend %_h3;
+    }
+  }
+}
+
+.heading--4 {
+  &.ce_headline {
+    @extend %_h4;
+  }
+
+  #{headings()} { // [1]
+    &:first-child {
+      @extend %_h4;
+    }
+  }
+}
+
+.heading--5 {
+  &.ce_headline {
+    @extend %_h5;
+  }
+
+  #{headings()} { // [1]
+    &:first-child {
+      @extend %_h5;
+    }
+  }
+}
+
+.heading--6 {
+  &.ce_headline {
+    @extend %_h6;
+  }
+
+  #{headings()} { // [1]
+    &:first-child {
+      @extend %_h6;
+    }
+  }
+}
+
+// heading alignment
+.heading--left {
+  text-align: left;
+}
+
+.heading--center {
+  text-align: center;
+}
+
+.heading--right {
+  text-align: right;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--attention {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  opacity: 0.75;
+
+  @include media-query(screen-md) {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-bottom: var(--base-spacing-unit--lg);
+  }
+}
+
+.text--alert {
+  padding: var(--base-spacing-unit);
+  border-radius: var(--base-border-radius);
+  border: 2px solid var(--color-alert-border);
+  color: var(--color-alert);
+
+  #{headings()} {
+    @extend %_h4;
+
+    &:first-child {
+
+      .ce_text + & {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.text--narrow {
+  @include media-query(screen-md) {
+    max-width: percentage(9/12);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-query(screen-lg) {
+    max-width: percentage(7/12);
+  }
+}
+
+// Paragraph, Lists
+p,
+ul,
+ol {
+
+  a {
+
+    &:hover {
+      --paragraph__link-color: var(--color-links-hover);
+    }
+  }
+}
+
+// Lists
+ul,
+ol {
+  padding: 0;
+  margin-top: 0;
+  margin-left: var(--base-spacing-unit--lg);
+}
+
+.checklist {
+  ul {
+    margin-left: 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin-left: 2rem;
+    text-indent: -2rem;
+    margin-bottom: var(--base-spacing-unit);
+
+    &::before {
+      content: '✔︎';
+      text-indent: -9999rem;
+      display: inline-block;
+      width: 2rem;
+      height: calc(var(--base-line-height) * 1rem);
+      line-height: var(--base-line-height);
+      background: url('/files/theme/img/icons/checkmark.svg') left center / 24px 24px no-repeat;
+      vertical-align: bottom;
+    }
+  }
+}
+
+// Blockquotes
+blockquote {
+  margin: var(--base-spacing-unit) 0;
+}
+
+// code
+// [1] contao 4.4: used inside ce_code element
+code {
+  background: var(--color-code-bg);
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: var(--base-border-radius);
+  color: var(--color-text);
+
+  // [1]
+  pre & {
+    background: none;
+    color: inherit;
+  }
+}

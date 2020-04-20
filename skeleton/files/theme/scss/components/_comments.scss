@@ -1,0 +1,60 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/COMMENTS
+// --------------------------------------------------
+
+@import '../../nutshell/scss/components/comments';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --reply-background: var(--color-gray-light);
+  --form-background:  var(--color-gray-light);
+}
+
+// --------------------------------------------------
+
+.ce_comments {
+  margin-bottom: var(--base-spacing-unit);
+
+  .form {
+    border: var(--base-border);
+    padding: var(--base-spacing-unit);
+
+    @include media-query(screen-md) {
+      padding: var(--base-spacing-unit--lg);
+    }
+  }
+
+  .widget-submit {
+    margin-bottom: 0;
+  }
+}
+
+.comment_default {
+
+  .info {
+    padding-bottom: var(--base-spacing-unit--sm);
+    margin-bottom: var(--base-spacing-unit--sm);
+  }
+
+  .reply {
+    margin-top: var(--base-spacing-unit);
+
+    @include media-query(screen-sm) {
+      padding: var(--base-spacing-unit);
+      background-color: var(--reply-background);
+      border-radius: var(--base-border-radius);
+    }
+
+    .info {
+      font-style: italic;
+    }
+  }
+}

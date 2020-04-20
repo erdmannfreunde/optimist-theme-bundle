@@ -1,0 +1,65 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/FAQ
+// --------------------------------------------------
+
+@import '../../nutshell/scss/components/faq';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --faq-border: none;
+}
+
+// --------------------------------------------------
+
+// PUT YOUR OWN STYLES HERE
+.faq-list {
+  > #{headings()} {
+    @extend %_h4;
+  }
+
+  > ul {
+    margin-top: var(--base-spacing-unit);
+  }
+
+  li {
+    @include card;
+
+    font-weight: 700;
+    color: var(--color-text);
+
+    a {
+      &::before {
+        content: '→';
+        margin-right: var(--base-spacing-unit--xs);
+      }
+
+      &:hover {
+        color: var(--color-links-hover);
+      }
+    }
+  }
+}
+
+.faq-page {
+  article {
+    > #{headings()} {
+      @extend %_h4;
+
+      margin-bottom: var(--base-spacing-unit);
+    }
+  }
+
+  section {
+    @include card;
+
+    margin-bottom: var(--base-spacing-unit);
+  }
+}

@@ -1,0 +1,75 @@
+//
+// NEWS
+// --------------------------------------------------
+
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/NEWSLETTER
+// --------------------------------------------------
+
+@import '../../nutshell/scss/components/newsletter';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --newsletter-list-font-family: var(--headings__font-family);
+  --newsletter-list-font-weight: var(--headings__font-weight);
+}
+
+// --------------------------------------------------
+
+.newsletter-subscribe {
+  margin-bottom: 0;
+
+  .widget-text,
+  .widget-submit {
+    margin-bottom: var(--base-spacing-unit);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  button.submit {
+    @extend button.btn--secondary;
+
+    margin-left: var(--base-spacing-unit--sm);
+  }
+}
+
+.newsletter-unsubscribe {
+  .widget-text,
+  .widget-submit {
+    margin-bottom: var(--base-spacing-unit);
+  }
+
+  button.submit {
+    @extend button.btn--secondary;
+
+    margin-left: var(--base-spacing-unit--sm);
+  }
+}
+
+.newsletter-list {
+  li {
+    font-family: var(--newsletter-list-font-family);
+    font-weight: var(--newsletter-list-font-weight);
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.newsletter-reader {
+  padding-top: var(--base-spacing-unit);
+  padding-bottom: var(--base-spacing-unit--sm);
+}

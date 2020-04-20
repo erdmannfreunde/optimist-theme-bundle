@@ -1,0 +1,62 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// TINYMCE-STYLES
+// --------------------------------------------------
+
+// SASS-VARIABLES
+$border-color: #777777;
+
+// --------------------------------------------------
+
+@import 'variables';
+
+// --------------------------------------------------
+
+.mce-content-body {
+  margin: 0.5rem;
+
+  p,
+  li,
+  a {
+    font-size: 1.375rem;
+    line-height: 1.625;
+  }
+
+  .btn {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      border: 1px solid $border-color;
+      text-decoration: none;
+      border-radius: 3px;
+      padding: 0.5rem 0.75rem;
+    }
+  }
+
+  .btn--primary {
+    a {
+      border-radius: var(--base-border-radius);
+      background: var(--color-btn);
+      color: var(--color-text--inverted);
+    }
+  }
+
+  .btn--secondary {
+    a {
+      border-radius: var(--base-border-radius);
+      color: var(--color-text--inverted);
+      border: var(--base-border-width) solid var(--color-brand-secondary);
+      background: var(--color-brand-secondary);
+    }
+  }
+
+  .text--attention {
+    font-weight: 600;
+  }
+}

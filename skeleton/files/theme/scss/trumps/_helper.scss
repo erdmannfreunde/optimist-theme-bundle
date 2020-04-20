@@ -1,0 +1,104 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// TRUMPS/HELPER
+// --------------------------------------------------
+
+// CSS-VARIABLES
+
+// --------------------------------------------------
+
+// sass-lint:disable no-universal-selectors, force-element-nesting
+
+.text--inverted,
+.text--inverted * {
+  color: var(--color-text--inverted);
+}
+
+.border-top {
+  border-top: var(--base-border);
+}
+
+.border-bottom {
+  border-bottom: var(--base-border);
+}
+
+.block--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// spacing classes for articles and elements beginning from .m-t-0 up to .m-t-5
+@for $i from 0 through 5 {
+  .m-t-#{$i},
+  .mod_article.m-t-#{$i} {
+    margin-top: calc(#{$i} * var(--base-spacing-unit));
+  }
+
+  .m-b-#{$i},
+  .mod_article.m-b-#{$i} {
+    margin-bottom: calc(#{$i} * var(--base-spacing-unit));
+  }
+
+  .p-t-#{$i},
+  .mod_article.p-t-#{$i} {
+    padding-top: calc(#{$i}i * var(--base-spacing-unit));
+  }
+
+  .p-b-#{$i},
+  .mod_article.p-b-#{$i} {
+    padding-bottom: calc(#{$i} * var(--base-spacing-unit));
+  }
+}
+
+
+// article widths container .article -[viewport]-[cols]
+//
+// [1] length($breakpoints) - go through length of available viewports (xs, sm, md, lg, xl == 5)
+// [2] $current - actual viewport (e.g. "xs")
+// [3] $i - counter, returns the actual grid-column
+// [4] $grid__columns - go through available columns (e.g. 1 --> 12)
+@for $size from 1 through length($breakpoints) { // [1]
+  $x:   nth($breakpoints, $size); // [2]
+  $current:   nth($x, 1); // [2]
+
+  // padding creation
+  @for $i from 1 through $grid__columns { // [3][4]
+    .article-#{$current}-#{$i} {
+      display: grid;
+      grid-template-columns: repeat($grid__columns, 1fr);
+      grid-gap: var(--grid__gutter);
+
+      .inside { // [2][3]
+        @extend %column-floating;
+
+        @supports not (display: grid) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  // width creation for every article- class
+  @include media-query(screen-#{$current}) { // [2]
+
+    @for $i from 1 through $grid__columns { // [3][4]
+      .article-#{$current}-#{$i} .inside { // [2][3]
+        grid-column-end: span $i;
+
+        @supports not (display: grid) {
+          width: percentage($i/12);
+        }
+      }
+
+      .article-start-#{$current}-#{$i} .inside {
+        grid-column-start: $i;
+      }
+    }
+  }
+}

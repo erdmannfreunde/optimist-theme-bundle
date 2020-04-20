@@ -1,0 +1,348 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/EVENTS
+// --------------------------------------------------
+
+// SASS-VARIABLES
+
+
+// --------------------------------------------------
+
+@import '../../nutshell/scss/components/events';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+
+:root {
+  --events-grid-columns--sm: 1;
+  --events-grid-columns--md: 2;
+  --events-grid-columns--lg: 3;
+
+  --events-shadow: var(--base-box-shadow);
+  --events-border-radius: 5px;
+}
+
+// --------------------------------------------------
+
+.events-list {
+  > {
+    #{headings()} {
+      @extend %_h5;
+
+      padding-bottom: var(--base-spacing-unit--sm);
+
+      @include media-query(screen-sm) {
+        grid-column: 3 / 10 span;
+      }
+
+      @include media-query(screen-md) {
+        grid-column: 3 / 10 span;
+      }
+
+      @include media-query(screen-lg) {
+        grid-column: 3 / 8 span;
+      }
+    }
+  }
+
+  .header {
+    @extend %_h5;
+
+    margin-top: 0;
+
+    &:not(.first) {
+      margin-top: var(--base-spacing-unit--lg);
+    }
+  }
+
+  .layout_list,
+  .layout_teaser {
+    @include card;
+
+    margin-bottom: var(--base-spacing-unit);
+
+    &:last-child {
+      padding-bottom: var(--grid__gutter);
+      border-bottom: var(--base-border);
+    }
+
+    &:hover {
+      -webkit-transform: none;
+              transform: none;
+    }
+
+    #{headings()} {
+      @extend %_h4;
+
+      margin-top: 0;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .time {
+      line-height: 1.25;
+      margin-bottom: var(--base-spacing-unit--sm);
+    }
+
+    .more {
+      a {
+        @extend %button;
+        @extend a.btn--secondary;
+      }
+    }
+  }
+
+  .layout_upcoming {
+    @include card;
+
+    margin-bottom: var(--base-spacing-unit);
+
+    time,
+    a {
+      display: block;
+      padding-top: 0;
+    }
+
+    a {
+      @extend %_h4;
+
+      margin-bottom: 0;
+      color: inherit;
+    }
+  }
+
+  .ce_text {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .more {
+    a {
+      --paragraph__link-decoration: none;
+    }
+  }
+
+  .empty {
+    margin-top: var(--base-spacing-unit--sm);
+    margin-bottom: var(--base-spacing-unit--sm);
+  }
+}
+
+.events-grid {
+  display: grid;
+  grid-gap: var(--grid__gutter);
+  margin-bottom: var(--base-spacing-unit);
+
+  @include media-query(screen-sm) {
+    grid-template-columns: repeat(var(--events-grid-columns--sm), 1fr);
+  }
+
+  @include media-query(screen-md) {
+    grid-template-columns: repeat(var(--events-grid-columns--md), 1fr);
+  }
+
+  @include media-query(screen-lg) {
+    grid-template-columns: repeat(var(--events-grid-columns--lg), 1fr);
+  }
+
+  @supports not(display: grid) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: calc(-1 * var(--grid__gutter) / 2);
+    margin-right: calc(-1 * var(--grid__gutter) / 2);
+  }
+
+  > .header {
+    display: none;
+  }
+
+  .layout_short,
+  .layout_list,
+  .layout_teaser {
+    @include card;
+
+    display: grid;
+    grid-template-rows: -webkit-min-content -webkit-min-content auto -webkit-min-content;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-columns: -webkit-min-content auto;
+    grid-template-columns: min-content auto;
+    -webkit-column-gap: var(--grid__gutter--half);
+       -moz-column-gap: var(--grid__gutter--half);
+            column-gap: var(--grid__gutter--half);
+    overflow: hidden;
+
+    @supports not (display: grid) {
+      border: none;
+    }
+  }
+
+  .layout_teaser {
+    .date,
+    .time {
+      grid-row: 2;
+      color: var(--color-gray);
+      font-size: var(--base-font-size--xs);
+      white-space: nowrap;
+    }
+  }
+
+  .image_container {
+    overflow: hidden;
+    padding: var(--base-spacing-unit) var(--base-spacing-unit) 0;
+  }
+
+  #{headings()} {
+    @extend %_h4;
+
+    margin-top: 0;
+    grid-row: 1;
+    grid-column: span 2;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .location {
+    grid-row: 2;
+    color: var(--color-gray);
+    font-size: var(--base-font-size--xs);
+    white-space: nowrap;
+  }
+
+  .ce_text {
+    grid-column: span 2;
+    margin-bottom: var(--base-spacing-unit);
+  }
+
+  .more {
+    grid-column: span 2;
+
+    a {
+      @extend %button;
+      @extend .btn--secondary;
+    }
+  }
+
+  .pagination {
+    @supports not (display: grid) {
+      padding-left: var(--grid__gutter--half);
+      padding-right: var(--grid__gutter--half);
+    }
+
+    .ie & {
+      padding-left: var(--grid__gutter--half);
+      padding-right: var(--grid__gutter--half);
+    }
+  }
+
+  .layout_upcoming {
+    @include card;
+
+    time,
+    a {
+      display: block;
+      padding-top: 0;
+    }
+
+    a {
+      @extend %_h4;
+
+      margin-bottom: 0;
+      color: inherit;
+    }
+  }
+}
+
+.events-reader {
+  .info {
+    font-weight: 700;
+    margin-bottom: var(--base-spacing-unit--sm);
+  }
+
+  .ce_text {
+    &:first-of-type {
+      font-size: var(--base-font-size--lg);
+      line-height: 1.6;
+    }
+  }
+}
+
+.events-menu {
+  @include card;
+
+  > {
+    #{headings()} {
+      @extend %_h5;
+    }
+  }
+
+  a,
+  .active {
+    text-decoration: none;
+    color: inherit;
+    font-family: var(--headings__font-family);
+  }
+
+  .level_2 {
+    a,
+    span.active {
+      vertical-align: middle;
+      text-decoration: none;
+
+      &::before {
+        content: '»';
+        margin-right: calc(var(--base-spacing-unit--xs) / 2);
+      }
+    }
+  }
+
+  .year {
+    > a,
+    > .active {
+      font-weight: var(--headings__font-weight);
+    }
+  }
+}
+
+.events-calendar {
+  font-size: var(--base-font-size--xs);
+
+  // sass-lint:disable-block no-vendor-prefixes
+  @include media-query(screen-sm-max) {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-touch-action: auto;
+        touch-action: auto;
+    -ms-overflow-style: none;
+  }
+
+  > {
+    #{headings()} {
+      @extend %_h5;
+
+      padding-bottom: var(--base-spacing-unit--sm);
+      margin-bottom: 0;
+    }
+  }
+
+  th,
+  td {
+    padding: calc(var(--base-spacing-unit--xs) / 2);
+    text-align: center;
+  }
+
+  .days {
+    width: percentage(1/7);
+  }
+}

@@ -1,0 +1,39 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/SEARCH
+// --------------------------------------------------
+
+@import '../../nutshell/scss/components/search';
+
+// --------------------------------------------------
+
+// VARIABLES
+
+// --------------------------------------------------
+
+// PUT YOUR OWN TABLE STYLES HERE
+.search {
+  .text,
+  .widget-text,
+  .submit,
+  .widget-submit {
+    margin-bottom: 0;
+  }
+
+  .even,
+  .odd {
+    padding-bottom: var(--base-spacing-unit);
+    margin-bottom: var(--base-spacing-unit);
+    border-bottom: var(--base-border);
+  }
+
+  .first {
+    border-top: var(--base-border);
+    padding-top: var(--base-spacing-unit);
+  }
+}

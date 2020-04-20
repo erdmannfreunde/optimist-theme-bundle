@@ -1,0 +1,48 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/CONTACT
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --card-border:          var(--base-border);
+  --card-shadow:          var(--base-box-shadow);
+  --card-border-radius:   var(--base-border-radius);
+  --card-background:      var(--color-page-background);
+  --card-padding:         var(--base-spacing-unit);
+}
+
+// --------------------------------------------------
+
+
+
+.card {
+  @include card;
+
+  color: var(--color-text);
+  display: grid;
+  grid-template-rows: -webkit-min-content -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content min-content 1fr min-content;
+  height: 100%;
+  margin-bottom: 0;
+
+  #{headings()} {
+    @extend %_h4;
+  }
+
+  .image_container {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: var(--base-spacing-unit);
+
+    img {
+      margin-left: 0;
+    }
+  }
+}

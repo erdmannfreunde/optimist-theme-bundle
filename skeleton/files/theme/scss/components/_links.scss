@@ -1,0 +1,138 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/LINKS
+// --------------------------------------------------
+
+@import '../../nutshell/scss/components/links';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --button-bg:                      linear-gradient(45deg, var(--color-purple) 0, var(--color-purple-light) 100%);
+  --button-border-radius:           2rem;
+  --btn-font-family:                var(--base-font-family-1);
+  --btn-font-weight:                700;
+  --button-spacing:                 var(--base-spacing-unit--xs) var(--base-spacing-unit);
+
+  --button-bg-hover:                linear-gradient( -135deg, var(--color-purple) 0, var(--color-purple-dark) 100%);
+
+  --button-primary-shadow:          0 10px 40px 0 rgba(50, 50, 50, 0.25);
+
+  --btn--secondary-color:           var(--color-brand-secondary);
+  --btn--secondary-color--dark:     var(--color-brand-secondary-dark);
+
+  --btn--primary-highlight-bg:      var(--color-text);
+  --btn--primary-highlight-text:    var(--color-text--inverted);
+
+  --btn--secondary-highlight-text:  var(--color-text--inverted);
+}
+
+// --------------------------------------------------
+
+a {
+  color: var(--color-links);
+
+  &:hover {
+    --color-links: var(--color-links-hover);
+  }
+}
+
+// [1] fix button gradient in chrome
+%button {
+  border: none; // [1]
+}
+
+// btn--primary & btn--secondary
+a,
+span,
+button {
+  &.btn--primary {
+    text-decoration: none;
+    -webkit-transition: background 0.3s, -webkit-box-shadow 0.3s;
+    transition: background 0.3s, -webkit-box-shadow 0.3s;
+    transition: background 0.3s, box-shadow 0.3s;
+    transition: background 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+
+    &:hover {
+      --button-bg: var(--button-bg-hover);
+      --button-text: var(--color-text--inverted);
+      -webkit-box-shadow: var(--button-primary-shadow);
+              box-shadow: var(--button-primary-shadow);
+    }
+
+    p & {
+      margin-bottom: 0;
+      text-decoration: none;
+    }
+  }
+
+  &.btn--secondary {
+    border-radius: var(--button-border-radius);
+    color: var(--color-text--inverted);
+    border: var(--base-border-width) solid var(--btn--secondary-color);
+    background: var(--btn--secondary-color);
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+
+    &:hover {
+      --btn--secondary-color: var(--btn--secondary-color--dark);
+    }
+
+    p & {
+      margin-bottom: 0;
+      text-decoration: none;
+    }
+  }
+}
+
+// [2] button used in a .band--highlight container
+div {
+  &.btn--primary {
+
+    a {
+      -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+      transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      transition: background-color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+
+      &:hover {
+        -webkit-box-shadow: var(--button-primary-shadow);
+                box-shadow: var(--button-primary-shadow);
+      }
+
+      .band--highlight & { // [2]
+        background-color: var(--btn--primary-highlight-bg);
+        color: var(--btn--primary-highlight-text);
+      }
+    }
+  }
+
+  &.btn--secondary {
+
+    a {
+      border-radius: var(--button-border-radius);
+      color: var(--color-text--inverted);
+      border: var(--base-border-width) solid var(--btn--secondary-color);
+      background: var(--btn--secondary-color);
+      -webkit-transition: background 0.3s;
+      transition: background 0.3s;
+
+      &:hover {
+        --btn--secondary-color: var(--btn--secondary-color--dark);
+      }
+    }
+  }
+}
+
+.back {
+  a {
+    @extend %button;
+    @extend a.btn--secondary;
+  }
+}

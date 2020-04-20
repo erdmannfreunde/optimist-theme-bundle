@@ -1,0 +1,165 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// TRUMPS/PRINT
+// --------------------------------------------------
+
+// VARIABLES
+
+// --------------------------------------------------
+
+
+// sass-lint:disable-all
+
+@media print {
+
+  // basic styles from html5 boilerplate https://github.com/h5bp/html5-boilerplate/blob/master/scss/main.css
+  *,
+  *:before,
+  *:after,
+  p:first-letter,
+  div:first-letter,
+  blockquote:first-letter,
+  li:first-letter,
+  p:first-line,
+  div:first-line,
+  blockquote:first-line,
+  li:first-line {
+    background: transparent !important;
+    color: #000 !important; // Black prints faster: http://www.sanbeiji.com/archives/953
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: var(--base-font-size);
+    font-weight: normal;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+    font-size: var(--base-font-size);
+    font-weight: normal;
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  div.btn a,
+  a.btn,
+  input.submit {
+    color: #000 !important;
+    border-color: #000 !important;
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    // border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  // Printing Tables: http://css-discuss.incutio.com/wiki/Printing_Tables
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  // end html5 boilerplate
+
+  .logo a[href]:after,
+  .ce_gallery a[href]:after {
+    content: "";
+  }
+
+  .nav,
+  .nav-toggler,
+  .hero__image,
+  .ce_comments .form {
+    display: none;
+  }
+
+  .hero,
+  .mod_article.hero,
+  .news-full--hero .hero {
+    min-height: 0;
+  }
+
+  // [1] prevent double borders, when two or more .band articles are following
+  .band {
+    margin-top: calc(-1 * var(--base-border-width)); // [1]
+    border-top: var(--base-border-width) solid var(--color-gray-light);
+    border-bottom: var(--base-border-width) solid var(--color-gray-light);
+  }
+
+  .news-grid > div {
+    grid-column: span 6 !important;
+
+    .image_container a:after {
+      content: "";
+    }
+  }
+
+  .news-full--hero .text_container,
+  .ce_comments {
+    @include make-width(12);
+  }
+
+  .ce_accordion .accordion {
+    display: block !important;
+  }
+
+  .ce_accordion .ui-accordion-header-icon {
+    display: none;
+  }
+
+  .col-xs-6,
+  .col-sm-6,
+  .col-md-6,
+  .col-lg-6,
+  .col-xl-6 {
+    grid-column: span 6;
+  }
+
+  .col-xs-4,
+  .col-sm-4,
+  .col-md-4,
+  .col-lg-4,
+  .col-xl-4 {
+    grid-column: span 4;
+  }
+}

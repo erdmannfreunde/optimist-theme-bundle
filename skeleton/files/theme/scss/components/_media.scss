@@ -1,0 +1,134 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/MEDIA
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --image-border:  var(--base-border);
+  --image-caption-padding: var(--base-spacing-unit);
+}
+
+// --------------------------------------------------
+
+@import '../../nutshell/scss/components/media';
+
+// --------------------------------------------------
+
+.ce_image {
+  @supports not(display: grid) {
+    margin-bottom: var(--grid__gutter);
+  }
+
+  a {
+    display: grid;
+    height: 100%;
+    grid-auto-rows: auto 1fr;
+  }
+
+  img {
+    margin-bottom: 0;
+    justify-self: center;
+  }
+
+  .caption {
+    width: 100%;
+    padding: var(--image-caption-padding);
+    margin-top: 0;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    border: var(--image-border);
+    border-top: none;
+  }
+}
+
+.image--border {
+  img {
+    border: var(--image-border);
+  }
+}
+
+.ce_text {
+  overflow: visible;
+
+  .float_left,
+  .float_right {
+    position: relative;
+    margin-bottom: var(--grid__gutter);
+
+    @include media-query(screen-sm) {
+      max-width: 50%;
+      margin-bottom: 0;
+    }
+  }
+
+  .float_left {
+    @include media-query(screen-sm) {
+      margin-right: var(--grid__gutter);
+    }
+  }
+
+  .float_right {
+    @include media-query(screen-sm) {
+      margin-left: var(--grid__gutter);
+    }
+  }
+
+  .caption {
+    font-size: var(--base-font-size--xs);
+    font-style: italic;
+  }
+}
+
+// [1] default class to create object-fit images
+// [2] add by js for browsers that don't support the object-fit attribute
+.image--object-fit {
+  .image_container { // [1]
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.compat-object-fit { // [2]
+  background-size: cover;
+  background-position: center center;
+
+  img {
+    opacity: 0;
+  }
+}
+
+// ce_youtube
+// contao 4.4, does no longer load youtube videos via mediaelement.js
+// instead it uses an iframe. Nutshell Framework uses the .ce_youtube container
+// to calculate the video ratio for responsiveness. Adding a Headline inside
+// .ce_youtube will cause wrong video dimensions
+// [1] Warning not to use a Headline in Youtube
+.ce_youtube {
+  #{headings()} {
+    position: absolute;
+    z-index: 1001;
+    background: var(--color-alert-bg);
+
+    &::after {
+      content: ' +++ Warning: do not use headlines inside ce_youtube, see _media.scss +++'; // [1]
+    }
+  }
+}

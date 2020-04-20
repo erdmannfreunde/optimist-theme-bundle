@@ -1,0 +1,30 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// MIXINS/RESPONSIVE
+// --------------------------------------------------
+
+// SASS-VARIABLES
+$wrapper-max:   72em;
+$additional_breakpoints: (
+  menu: (
+    min:        52em, // 768px
+    max:        (52em - 0.0625em), // 767px
+  )
+) !default;
+
+// --------------------------------------------------
+
+@import '../../nutshell/scss/mixins/responsive';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+
+// --------------------------------------------------
+
+// PUT ADDITONAL RESPONSIVE MIXINS HERE

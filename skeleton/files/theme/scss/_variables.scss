@@ -1,0 +1,92 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+
+// VARIABLES
+
+// --------------------------------------------------
+
+@import '../../nutshell/scss/variables';
+
+// --------------------------------------------------
+
+:root {
+  // General Colors
+  --color-gray-dark:         #233D63;
+  --color-gray:              #46465D; //#555;
+  --color-gray-light:        #CFD8DC;
+  --color-gray-lighter:      #FAFCFF;
+
+  --color-purple-dark:        #9041FF;
+  --color-purple:             #6E46AE;
+  --color-purple-light:       #BF6CFF;
+  --color-purple-lighter:     rgba(191, 108, 255, 0.075); // hsl(274, 10%, 100%);
+
+  --color-teal-dark:          hsl(166, 72%, 38%);
+  --color-teal:               hsl(166, 72%, 48%); //#22d4ab;
+
+  --color-orange:            #FF5408;
+
+
+  --color-tint:              var(--color-purple-lighter);
+
+  --color-brand-primary:          var(--color-purple);
+  --color-brand-primary-dark:     var(--color-purple-dark);
+  --color-brand-secondary:        var(--color-teal);
+  --color-brand-secondary-dark:   var(--color-teal-dark);
+
+  --color-brand:             var(--color-brand-primary);
+  --color-highlight:         var(--color-brand);
+
+  // Page
+  --color-page-background:   #FFFFFF;
+  --color-text:              var(--color-gray-dark);
+
+  --color-text--light:       var(--color-gray-light);
+
+  // Links
+  --color-links:             var(--color-brand-secondary);
+  --color-links-hover:       var(--color-brand-secondary-dark);
+
+  // Buttons
+  --color-btn:               var(--color-brand-primary);
+  --color-btn-text:          #FFFFFF;
+
+
+  // Base Font Settings
+  --base-font-size:                  1rem;
+  --base-line-height:                1.625;
+
+  --base-font-size--xs:              0.875rem;
+
+  --base-font-size--lg:              1.125rem;
+  --base-font-size--xl:              1.25rem;
+
+  --base-font-family-1:              -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
+
+  --base-font-family:                var(--base-font-family-1);
+
+  // Base Spacing Units
+  --base-spacing-unit:   1rem;
+
+
+  // Base Border Settings
+  --base-border-radius:  5px;
+  --base-border-width:   1px;
+  --base-border-color:   #CFD8DC; //#eff7ff;
+
+
+  // Base Box Shadow
+  --base-box-shadow:       0 10px 40px 0 rgba(50, 50, 50, 0.25);
+
+
+  // Bands
+  --color-band-highlight-background:     linear-gradient( -165deg, var(--color-purple-light), var(--color-purple));
+  --color-band-highlight-text:           var(--color-text--inverted);
+  --color-band-tint-background:          var(--color-tint);
+  --color-band-dark-text:                var(--color-text--inverted);
+  --color-band-dark-background:          var(--color-gray-dark);
+}

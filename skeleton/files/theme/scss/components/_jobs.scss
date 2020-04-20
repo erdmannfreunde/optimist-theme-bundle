@@ -1,0 +1,58 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/FACTS
+// --------------------------------------------------
+
+// CSS-VARIABLES
+
+// --------------------------------------------------
+
+.job__item {
+  border: var(--base-border);
+  padding: var(--base-spacing-unit) var(--base-spacing-unit) 0;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr -webkit-min-content;
+  grid-template-rows: 1fr min-content;
+  margin-bottom: 0;
+  height: 100%;
+
+  @supports not (display: grid) {
+    margin-bottom: var(--base-spacing-unit);
+  }
+
+  #{headings()} {
+    @extend %_h5;
+  }
+
+  p {
+    color: var(--color-text--light);
+    font-size: var(--base-font-size--xs);
+  }
+
+  p:last-child {
+    margin-top: var(--base-spacing-unit);
+    margin-bottom: 0;
+
+    &::before {
+      content: '';
+      border-top: var(--base-border);
+      display: block;
+      left: 0;
+      right: 0;
+      position: absolute;
+    }
+
+    a {
+      padding-top: var(--base-spacing-unit--sm);
+      padding-bottom: var(--base-spacing-unit--sm);
+      display: block;
+      text-decoration: none;
+    }
+  }
+}

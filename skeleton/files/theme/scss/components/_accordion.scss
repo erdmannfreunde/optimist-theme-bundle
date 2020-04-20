@@ -1,0 +1,94 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/ACCORDION
+// --------------------------------------------------
+
+@import '../../nutshell/scss/components/accordion';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --accordion-padding:       0 var(--base-spacing-unit) var(--base-spacing-unit);
+  --accordion-background:    var(--color-page-background);
+  --accordion-border-radius: var(--base-border-radius);
+  --accordion-border:        var(--base-border);
+
+  --toggler-font-size:       var(--base-font-size);
+  --toggler-background:      transparent;
+  --toggler-color:           inherit;
+  --toggler-border:          var(--base-border);
+  --toggler-padding:         var(--base-spacing-unit--sm) var(--base-spacing-unit--sm);
+  --toggler-icon-size:       1;
+
+  --toggler-font-weight:     700;
+}
+
+// --------------------------------------------------
+
+// default accordion
+.ce_accordion {
+  display: grid;
+  align-self: start;
+
+  .toggler {
+    --card-padding: var(--toggler-padding);
+    @include card;
+
+    font-weight: var(--toggler-font-weight);
+    vertical-align: middle;
+    -webkit-transition: border-radius 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+    transition: border-radius 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+    transition: border-radius 0.3s, box-shadow 0.3s, transform 0.3s;
+    transition: border-radius 0.3s, box-shadow 0.3s, transform 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+
+    &:hover {
+      &.ui-accordion-header-active {
+        -webkit-transform: none;
+                transform: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+      }
+    }
+  }
+
+  .ui-accordion-header-active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+  }
+
+  // [1] define size for plus/cross
+  .ui-accordion-header-icon {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    display: inline-block;
+
+    &::before {
+      content: '→';
+    }
+  }
+
+  .ui-icon-triangle-1-s {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+
+  .accordion {
+    border: var(--accordion-border);
+    border-top: none;
+  }
+
+  .ce_text {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

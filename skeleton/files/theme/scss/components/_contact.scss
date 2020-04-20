@@ -1,0 +1,42 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// COMPONENTS/CONTACT
+// --------------------------------------------------
+
+// CSS-VARIABLES
+
+// --------------------------------------------------
+
+.ce_contact {
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr;
+  grid-template-rows: min-content 1fr;
+  height: 100%;
+
+  #{headings()},
+  .contact__name {
+    @extend %_h4;
+  }
+
+  .contact__email {
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  .image_container {
+    position: relative;
+  }
+
+  .text_container {
+    height: auto;
+    padding: var(--base-spacing-unit) var(--base-spacing-unit) var(--base-spacing-unit--lg);
+    border: var(--base-border);
+  }
+}

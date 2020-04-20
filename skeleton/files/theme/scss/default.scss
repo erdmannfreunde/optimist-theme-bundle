@@ -1,0 +1,61 @@
+/**
+  * Erdmann & Freunde
+  * OPTIMIST Contao Theme
+  * erdmann-freunde.de/produkte/contao-themes/optimist/
+  *
+  */
+
+// VARIABLES
+@import 'variables';
+
+
+// MIXINS
+@import 'mixins/general';
+@import 'mixins/responsive';
+
+
+// GENERIC (load these directly from nutshell, as we don't need additional normalize, resets and box-sizing)
+@import '../../nutshell/scss/generic/normalize';
+@import '../../nutshell/scss/generic/contao-reset';
+@import '../../nutshell/scss/generic/box-sizing';
+
+
+// BASE
+@import 'base/shared';
+@import 'base/page';
+@import 'base/fonts';
+@import 'base/type';
+@import 'base/grid';
+@import 'base/layout';
+
+
+// COMPONENTS
+// .... optimistmist theme + nutshell loading
+@import 'components/media';
+@import 'components/links';
+@import 'components/navs';
+@import 'components/slider';
+@import 'components/news';
+@import 'components/events';
+@import 'components/forms';
+@import 'components/accordion';
+@import 'components/downloads';
+@import 'components/tables';
+@import 'components/newsletter';
+@import 'components/faq';
+@import 'components/comments';
+@import 'components/search';
+// .... optimist theme only
+@import 'components/logo';
+@import 'components/hero';
+@import 'components/contact';
+@import 'components/facts';
+@import 'components/jobs';
+@import 'components/notes';
+@import 'components/card';
+
+
+// TRUMPS
+@import 'trumps/helper';
+@import 'trumps/print';
+@import 'trumps/browser-support';

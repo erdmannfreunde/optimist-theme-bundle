@@ -1,0 +1,230 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// BASE/LAYOUT
+// --------------------------------------------------
+
+@import '../../nutshell/scss/base/layout';
+
+// --------------------------------------------------
+
+// CSS-VARIABLES
+:root {
+  --wrapper-background:                          #FFFFFF;
+  --header-color-background:                     #FFFFFF;
+  --header-color-background--inverted:           var(--color-band-dark-background);
+  --header-color-text--invert:                   #FFFFFF;
+}
+
+// --------------------------------------------------
+
+// nav--mobile--active
+.html--fixed {
+  @include media-query(screen-menu-max) {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+// #wrapper
+// [1] full height layout with css grid layout
+[id='wrapper'] {
+  min-height: 100vh; // [1]
+  display: grid; // [1]
+  grid-template-rows: -webkit-min-content auto -webkit-min-content;
+  grid-template-rows: min-content auto min-content; // [1]
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--wrapper-background);
+}
+
+// #header
+[id='header'] {
+  @include padding-default(var(--grid__gutter));
+
+  background: var(--header-color-background);
+  z-index: 1001;
+  left: 0;
+  right: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  color: var(--header-color-text);
+
+  .inside {
+    @include padding-default(0);
+
+    padding-top: var(--base-spacing-unit);
+    padding-bottom: var(--base-spacing-unit);
+    display: grid;
+    grid-template-columns: auto auto;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    position: relative;
+
+    @supports not (display: grid) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .ie & {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+
+  html {
+    &.html--fixed & {
+      pointer-events: none;
+    }
+  }
+}
+
+// #container
+// [1] sticky footer via flexbox
+[id='container'] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; // [1]
+}
+
+// #footer
+[id='footer'] {
+  @include padding-default(var(--grid__gutter));
+
+  -webkit-box-flex: 0;
+
+      -ms-flex: none;
+
+          flex: none;
+  border-top: var(--base-border);
+
+  .inside {
+    @include padding-default(0);
+
+    display: grid;
+    grid-template-columns: auto auto;
+
+    padding-top: var(--base-spacing-unit);
+    padding-bottom: var(--base-spacing-unit--xs);
+
+    @supports not (display: grid) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+    }
+
+    @include media-query(screen-xl) {
+      padding-top: var(--base-spacing-unit--lg);
+      padding-bottom: var(--base-spacing-unit--sm);
+    }
+  }
+}
+
+// default article
+.mod_article {
+  @include wrapper-max(none);
+  @include padding-default(var(--grid__gutter));
+
+  position: relative;
+  padding-top:    var(--base-spacing-unit--lg);
+  padding-bottom: var(--base-spacing-unit--lg);
+
+  @include media-query(screen-lg) {
+    padding-top:    var(--base-spacing-unit--xl);
+    padding-bottom: var(--base-spacing-unit--xl);
+  }
+
+  .inside {
+    @include wrapper-max;
+
+    > .last {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// article variations
+.article--highlight {
+  background: var(--color-band-highlight-background);
+  color: var(--color-band-highlight-text);
+
+  a {
+    color: inherit;
+  }
+}
+
+.article--bubble-left {
+  background-image: url('/files/theme/img/background-bubble-left.svg');
+  background-repeat: no-repeat;
+  background-position: -1% 0;
+}
+
+.article--bubble-right {
+  background-image: url('/files/theme/img/background-bubble-right.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.article--tint {
+  background-color: var(--color-band-tint-background);
+  background-repeat: no-repeat;
+  background-position: 50% 101%;
+  padding-top:    var(--base-spacing-unit--lg);
+  padding-bottom: var(--base-spacing-unit--lg);
+
+  @include media-query(screen-md) {
+    padding-top:    calc(2 * var(--base-spacing-unit--xl));
+    padding-bottom: calc(2 * var(--base-spacing-unit--xl));
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    height: calc(1.5 * var(--base-spacing-unit--xl));
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+  }
+
+  &::before {
+    top: 0;
+    background-image: url('/files/theme/img/background-bubble-bottom.svg');
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background-position-y: 0;
+  }
+
+  &::after {
+    background-image: url('/files/theme/img/background-bubble-bottom.svg');
+    bottom: 0;
+  }
+
+  .inside {
+    position: relative;
+    z-index: 1001;
+  }
+}
+
+.article--dark {
+  background: var(--color-band-dark-background);
+  color: var(--color-band-dark-text);
+}
