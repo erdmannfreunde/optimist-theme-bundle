@@ -16,17 +16,17 @@
 :root {
   // General Colors
   --color-gray-dark:         #233D63;
-  --color-gray:              #46465D; //#555;
+  --color-gray:              #46465D;
   --color-gray-light:        #CFD8DC;
   --color-gray-lighter:      #FAFCFF;
 
   --color-purple-dark:        #9041FF;
   --color-purple:             #6E46AE;
   --color-purple-light:       #BF6CFF;
-  --color-purple-lighter:     rgba(191, 108, 255, 0.075); // hsl(274, 10%, 100%);
+  --color-purple-lighter:     rgba(191, 108, 255, 0.075);
 
   --color-teal-dark:          hsl(166, 72%, 38%);
-  --color-teal:               hsl(166, 72%, 48%); //#22d4ab;
+  --color-teal:               hsl(166, 72%, 48%);
 
   --color-orange:            #FF5408;
 
@@ -76,7 +76,7 @@
   // Base Border Settings
   --base-border-radius:  5px;
   --base-border-width:   1px;
-  --base-border-color:   #CFD8DC; //#eff7ff;
+  --base-border-color:   #CFD8DC;
 
 
   // Base Box Shadow
