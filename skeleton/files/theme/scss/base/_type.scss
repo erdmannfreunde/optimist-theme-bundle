@@ -260,9 +260,7 @@ $headlines: (
 p,
 ul,
 ol {
-
   a {
-
     &:hover {
       --paragraph__link-color: var(--color-links-hover);
     }

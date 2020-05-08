@@ -94,7 +94,6 @@ button {
 // [2] button used in a .band--highlight container
 div {
   &.btn--primary {
-
     a {
       -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
       transition: background-color 0.3s, -webkit-box-shadow 0.3s;
@@ -114,7 +113,6 @@ div {
   }
 
   &.btn--secondary {
-
     a {
       border-radius: var(--button-border-radius);
       color: var(--color-text--inverted);

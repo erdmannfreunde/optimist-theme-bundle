@@ -24,7 +24,7 @@
 
   -webkit-box-shadow: var(--base-box-shadow);
 
-          box-shadow: var(--base-box-shadow); //0 5px 60px rgba(0,0,0,.1);
+          box-shadow: var(--base-box-shadow);
   margin-bottom: var(--base-spacing-unit);
 
   @include media-query(screen-lg) {
