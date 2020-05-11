@@ -14,13 +14,13 @@
 
 // CSS-VARIABLES
 :root {
-  --button-bg:                      linear-gradient(45deg, var(--color-purple) 0, var(--color-purple-light) 100%);
+  --button-bg:                      var(--color-btn);
   --button-border-radius:           2rem;
   --btn-font-family:                var(--base-font-family-1);
   --btn-font-weight:                700;
   --button-spacing:                 var(--base-spacing-unit--xs) var(--base-spacing-unit);
 
-  --button-bg-hover:                linear-gradient( -135deg, var(--color-purple) 0, var(--color-purple-dark) 100%);
+  --button-bg-hover:                var(--color-btn-hover);
 
   --button-primary-shadow:          0 10px 40px 0 rgba(50, 50, 50, 0.25);
 

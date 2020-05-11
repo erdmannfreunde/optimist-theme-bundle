@@ -34,6 +34,7 @@
   --color-tint:              var(--color-purple-lighter);
 
   --color-brand-primary:          var(--color-purple);
+  --color-brand-primary-light:    var(--color-purple-light);
   --color-brand-primary-dark:     var(--color-purple-dark);
   --color-brand-secondary:        var(--color-teal);
   --color-brand-secondary-dark:   var(--color-teal-dark);
@@ -52,7 +53,8 @@
   --color-links-hover:       var(--color-brand-secondary-dark);
 
   // Buttons
-  --color-btn:               var(--color-brand-primary);
+  --color-btn:               linear-gradient(45deg, var(--color-brand-primary) 0, var(--color-brand-primary-light) 100%);
+  --color-btn-hover:         linear-gradient(-135deg, var(--color-brand-primary) 0, var(--color-brand-primary-dark) 100%);;
   --color-btn-text:          #FFFFFF;
 
 
