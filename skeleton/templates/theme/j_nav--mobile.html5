@@ -22,5 +22,13 @@ jQuery(function ($) {
 
   // make sure :hover is working under iOS, even for <strong>-tags
   $('.nav li.submenu > strong').click(function(){});
+
+  $(window).on('resize', function () {
+    if($('.nav-toggler').is(':hidden')) {
+        $('.nav--mobile').removeClass('nav--mobile--active');
+        $('html').removeClass('html--fixed');
+        $('.nav--mobile').css('top', '');
+    }
+  });
 });
 </script>
