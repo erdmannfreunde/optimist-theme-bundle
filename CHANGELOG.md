@@ -1,5 +1,11 @@
 # CHANGELOG:
 
+## 1.0.3 (15.07.2020)
+- Fehlerhafte Darstellung der Navigation bei Veränderung des Viewports behoben, s. [#2](https://github.com/ErdmannFreunde/optimist-theme-bundle/issues/2)
+- Browser-Support Hinweis wird nun per JS eingefügt (`js_supportmsg.html5`), s.a. [#3](https://github.com/ErdmannFreunde/optimist-theme-bundle/issues/3)
+
+_Danke rflx und rabauss_
+
 ## 1.0.2 (11.05.2020)
 - Verlauf für btn--primary lässt sich nun über die `_variables.scss` anpassen 
 
