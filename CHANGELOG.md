@@ -1,5 +1,9 @@
 # CHANGELOG:
 
+# 1.1.0 (18.09.2020)
+- OPTIMIST für Contao 4.10 optimiert
+- Fehler bei animiertem SVG im Firefox behoben
+
 ## 1.0.3 (15.07.2020)
 - Fehlerhafte Darstellung der Navigation bei Veränderung des Viewports behoben, s. [#2](https://github.com/ErdmannFreunde/optimist-theme-bundle/issues/2)
 - Browser-Support Hinweis wird nun per JS eingefügt (`js_supportmsg.html5`), s.a. [#3](https://github.com/ErdmannFreunde/optimist-theme-bundle/issues/3)
