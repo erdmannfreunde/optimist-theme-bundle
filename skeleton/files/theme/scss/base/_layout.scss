@@ -200,9 +200,11 @@
     z-index: 1;
     left: 0;
     right: 0;
+    width: 100%;
     height: calc(1.5 * var(--base-spacing-unit--xl));
     background-repeat: no-repeat;
     background-position-x: 50%;
+    background-size: 100% 100%;
   }
 
   &::before {
