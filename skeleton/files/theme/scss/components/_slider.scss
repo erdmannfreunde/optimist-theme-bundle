@@ -26,8 +26,12 @@
 
 // sass-lint:disable no-universal-selectors
 .slider {
-  .slider-wrapper > * {
-    margin-bottom: 0;
+  display: grid;
+
+  .slider-wrapper {
+    > * {
+      margin-bottom: 0;
+    }
   }
 
   .slider-control a {

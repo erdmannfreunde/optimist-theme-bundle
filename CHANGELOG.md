@@ -1,5 +1,9 @@
 # CHANGELOG:
 
+# 1.1.1 (08.11.2020)
+- Fehler bei animiertem SVG im Firefox behoben
+- Fehlerhafte Darstellung des Contao Sliders behoben, siehe #5
+
 # 1.1.0 (18.09.2020)
 - OPTIMIST für Contao 4.10 optimiert
 - Fehler bei animiertem SVG im Firefox behoben
