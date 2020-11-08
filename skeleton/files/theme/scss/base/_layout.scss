@@ -52,9 +52,6 @@
   z-index: 1001;
   left: 0;
   right: 0;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
   color: var(--header-color-text);
 
   .inside {
@@ -89,23 +86,10 @@
   }
 }
 
-// #container
-// [1] sticky footer via flexbox
-[id='container'] {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto; // [1]
-}
-
 // #footer
 [id='footer'] {
   @include padding-default(var(--grid__gutter));
 
-  -webkit-box-flex: 0;
-
-      -ms-flex: none;
-
-          flex: none;
   border-top: var(--base-border);
 
   .inside {
