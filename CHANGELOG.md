@@ -1,5 +1,8 @@
 # CHANGELOG:
 
+# 1.1.2 (08.11.2020)
+- Das Template be_tinyMCE.html5 ist nun mit dem TinyMCE 5 kompatibel (Standard in Contao 4.10)
+
 # 1.1.1 (08.11.2020)
 - Fehler bei animiertem SVG im Firefox behoben
 - Fehlerhafte Darstellung des Contao Sliders behoben, siehe #5
