@@ -39,6 +39,7 @@
   display: grid; // [1]
   grid-template-rows: -webkit-min-content auto -webkit-min-content;
   grid-template-rows: min-content auto min-content; // [1]
+  grid-template-columns: 100%;
   margin-left: auto;
   margin-right: auto;
   background: var(--wrapper-background);

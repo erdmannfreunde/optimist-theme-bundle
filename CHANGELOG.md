@@ -1,5 +1,8 @@
 # CHANGELOG:
 
+# 1.1.3 (15.11.2020)
+- Fehlerhafte Darstellung für alle Slider behoben, siehe #5. Danke @alwinvollmer
+
 # 1.1.2 (08.11.2020)
 - Das Template be_tinyMCE.html5 ist nun mit dem TinyMCE 5 kompatibel (Standard in Contao 4.10)
 
