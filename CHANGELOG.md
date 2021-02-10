@@ -1,5 +1,8 @@
 # CHANGELOG:
 
+# 1.1.4 (10.02.2021)
+- Support für Composer 2.X bzw. Contao Manager 1.4
+
 # 1.1.3 (15.11.2020)
 - Fehlerhafte Darstellung für alle Slider behoben, siehe #5. Danke @alwinvollmer
 
