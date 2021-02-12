@@ -53,6 +53,14 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         $target = dirname($event->getComposer()->getConfig()->get('vendor-dir'));
         $source = $event->getComposer()->getInstallationManager()->getInstallPath($package).'/skeleton';
 
+        if (is_dir($target.'/files/theme') && !$filesystem->isDirEmpty($target.'/files/theme')) {
+            $event->getIO()->writeError(
+                'OPTIMIST Theme Demo: Cannot install theme files because folder "/files/theme" exists. Remove/rename the folder and make sure that you have a backup of the files inside "/files/theme" and "/templates/theme" folders.'
+            );
+
+            return;
+        }
+
         $iterator = new \RecursiveIteratorIterator(
             new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS),
             \RecursiveIteratorIterator::LEAVES_ONLY

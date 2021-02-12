@@ -5,7 +5,7 @@
     "keywords":["contao", "erdmannfreunde", "optimist", "theme"],
     "type": "composer-plugin",
     "license": "LGPL-3.0-or-later",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "authors":[
         {
             "name": "Erdmann & Freunde",
@@ -38,7 +38,5 @@
     "extra": {
         "class": "ErdmannFreunde\\OptimistTheme\\Composer\\Plugin",
         "contao-manager-plugin": "ErdmannFreunde\\OptimistTheme\\ContaoManager\\Plugin"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

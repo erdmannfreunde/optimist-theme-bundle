@@ -10,4 +10,7 @@ Thumbs.db
 .idea/
 nbproject/
 
+vendor/
+composer.lock
+
 skeleton/files/nutshell
