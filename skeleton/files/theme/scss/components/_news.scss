@@ -75,7 +75,9 @@ $news-grid-columns--lg: 3;
     .info,
     .ce_text,
     .more {
-      @include make-col(6);
+      @include media-query(screen-md) {
+        @include make-col(6);
+      }
     }
 
     #{headings()} {
