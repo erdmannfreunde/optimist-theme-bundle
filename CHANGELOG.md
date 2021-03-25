@@ -1,19 +1,29 @@
 # CHANGELOG:
 
-# 1.1.4 (10.02.2021)
+## 1.1.7 (25.03.2021)
+- OPTIMIST für Contao 4.11 optimiert
+- Fehlerbehebung bei der Hilfsklassen-Erstellung (Danke Marcel)
+
+## 1.1.6 (09.03.2021)
+- Fehlerhafte Darstellung der News auf kleinen Bildschirmen behoben (Danke FinalTestMan)
+
+## 1.1.5 (12.02.2021)
+- Der Contao Manager üerprüft bei einem Update nun, ob bereits ein entsprechender Ordner `theme` existiert und überschreibt diesen nicht
+
+## 1.1.4 (10.02.2021)
 - Support für Composer 2.X bzw. Contao Manager 1.4
 
-# 1.1.3 (15.11.2020)
+## 1.1.3 (15.11.2020)
 - Fehlerhafte Darstellung für alle Slider behoben, siehe #5. Danke @alwinvollmer
 
-# 1.1.2 (08.11.2020)
+## 1.1.2 (08.11.2020)
 - Das Template be_tinyMCE.html5 ist nun mit dem TinyMCE 5 kompatibel (Standard in Contao 4.10)
 
-# 1.1.1 (08.11.2020)
+## 1.1.1 (08.11.2020)
 - Fehler bei animiertem SVG im Firefox behoben
 - Fehlerhafte Darstellung des Contao Sliders behoben, siehe #5
 
-# 1.1.0 (18.09.2020)
+## 1.1.0 (18.09.2020)
 - OPTIMIST für Contao 4.10 optimiert
 - Fehler bei animiertem SVG im Firefox behoben
 - Verwendung des neuen Grid-Bundles
