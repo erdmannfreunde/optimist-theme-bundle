@@ -46,7 +46,7 @@
 
   .p-t-#{$i},
   .mod_article.p-t-#{$i} {
-    padding-top: calc(#{$i}i * var(--base-spacing-unit));
+    padding-top: calc(#{$i} * var(--base-spacing-unit));
   }
 
   .p-b-#{$i},
