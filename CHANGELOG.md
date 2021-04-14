@@ -1,5 +1,11 @@
 # CHANGELOG:
 
+# 1.1.9 (14.04.2021)
+- Übersicht für im Theme verwendete CSS-Klassen in `README.md` ergänzt
+
+## 1.1.8 (13.04.2021)
+- PHP 8 Support. Bei Fragen und Problemen mit PHP 8 bitte Tickets erstellen
+
 ## 1.1.7 (25.03.2021)
 - OPTIMIST für Contao 4.11 optimiert
 - Fehlerbehebung bei der Hilfsklassen-Erstellung (Danke Marcel)
