@@ -16,7 +16,7 @@
         "homepage": "https://erdmann-freunde.de"
     },
     "require": {
-        "php": "^7.1",
+        "php": ">=7.1",
         "composer-plugin-api": "^1.1 || ^2.0",
         "contao/manager-bundle": "^4.9",
         "erdmannfreunde/euf_nutshell": "^1.0",
