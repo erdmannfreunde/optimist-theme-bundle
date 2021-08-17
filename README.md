@@ -49,3 +49,16 @@ siehe [Video-Anleitung](https://erdmann-freunde.de/produkte/contao-themes/optimi
 |                   | `border-top`                      | Fügt dem Element/Artikel einen Rahmen oben hinzu                                                                                                                                                                                                                                                     | trumps/_helper                   |
 |                   | `border-bottom`                   | Fügt dem Element/Artikel einen Rahmen unte hinzu                                                                                                                                                                                                                                                     | trumps/_helper                   |
 |                   | `block--center`                   | Platziert das Element mittig (margin-left/-right: auto)                                                                                                                                                                                                                                              | trumps/_helper                   |
+
+## 4. Optimist über Composer aktualisieren
+Ein Upload über den Contao Manager führt dazu, dass sich Contao nicht mehr ohne weitere Vorkehrungen über Composer aktualisieren lässt. Dies lässt sich erreichen, indem man in der composer.json im Projektverzeichnis folgende Angaben ergänzt:
+
+```
+"repositories": {
+  "erdmannfreunde/optimist-theme-bundle": {
+    "type": "artifact",
+    "url": "contao-manager/packages/"
+  }
+}
+```
+**Erklärung:** Bei dem Upload über den CM handelt es sich um ein sogenanntes Artefakt. Dieses lässt sich als Repository über Composer laden. (Danke [Christian](https://github.com/contaoacademy))
