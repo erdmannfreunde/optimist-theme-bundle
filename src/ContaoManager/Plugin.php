@@ -18,7 +18,9 @@ class Plugin implements ExtensionPluginInterface
     public function getExtensionConfig($extensionName, array $extensionConfigs, ContainerBuilder $container)
     {
         if ('contao' === $extensionName) {
-            $extensionConfigs[] = ['localconfig' => ['folderUrl' => true]];
+            foreach($extensionConfigs as $id=>$value) {
+                $extensionConfigs[$id]['localconfig'] = array_merge($extensionConfigs[$id]['localconfig'] ?? [], ['folderUrl' => true]);
+            }
         }
 
         return $extensionConfigs;

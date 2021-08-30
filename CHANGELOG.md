@@ -1,5 +1,10 @@
 # CHANGELOG:
 
+# 1.1.10 (29.08.2021)
+- fix: localconfig-Einstellungen aus der config.yml werden nun übernommen (#10)
+
+_Danke katgirl und fritzmg_
+
 # 1.1.9 (14.04.2021)
 - Übersicht für im Theme verwendete CSS-Klassen in `README.md` ergänzt
 
