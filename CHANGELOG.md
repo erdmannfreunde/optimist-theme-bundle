@@ -1,11 +1,16 @@
 # CHANGELOG:
 
-# 1.1.10 (29.08.2021)
+## 1.2.0 (20.09.2021)
+- OPTIMIST für Contao 4.12 optimiert
+- SVG-Blasen-Animation entfernt, da sie zu viel Ressourcen verbraucht
+- ungenutzte Dateien und Anweisungen entfernt
+
+## 1.1.10 (29.08.2021)
 - fix: localconfig-Einstellungen aus der config.yml werden nun übernommen (#10)
 
 _Danke katgirl und fritzmg_
 
-# 1.1.9 (14.04.2021)
+## 1.1.9 (14.04.2021)
 - Übersicht für im Theme verwendete CSS-Klassen in `README.md` ergänzt
 
 ## 1.1.8 (13.04.2021)
