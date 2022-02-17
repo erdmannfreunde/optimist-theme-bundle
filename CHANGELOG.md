@@ -1,5 +1,10 @@
 # CHANGELOG:
 
+## 1.3.0 (16.02.2022)
+- OPTIMIST für Contao 4.13 optimiert
+- Contao 4.12 Support eingestellt
+
+
 ## 1.2.0 (20.09.2021)
 - OPTIMIST für Contao 4.12 optimiert
 - SVG-Blasen-Animation entfernt, da sie zu viel Ressourcen verbraucht
