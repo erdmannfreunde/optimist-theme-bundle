@@ -5,7 +5,7 @@
     "keywords":["contao", "erdmannfreunde", "optimist", "theme"],
     "type": "composer-plugin",
     "license": "LGPL-3.0-or-later",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "authors":[
         {
             "name": "Erdmann & Freunde",
@@ -33,6 +33,11 @@
     "autoload": {
         "psr-4": {
             "ErdmannFreunde\\OptimistTheme\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "erdmannfreunde/optimist-theme-bundle": true
         }
     },
     "extra": {
