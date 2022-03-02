@@ -35,11 +35,6 @@
             "ErdmannFreunde\\OptimistTheme\\": "src/"
         }
     },
-    "config": {
-        "allow-plugins": {
-            "erdmannfreunde/optimist-theme-bundle": true
-        }
-    },
     "extra": {
         "class": "ErdmannFreunde\\OptimistTheme\\Composer\\Plugin",
         "contao-manager-plugin": "ErdmannFreunde\\OptimistTheme\\ContaoManager\\Plugin"
