@@ -62,3 +62,13 @@ Ein Upload über den Contao Manager führt dazu, dass sich Contao nicht mehr ohn
 }
 ```
 **Erklärung:** Bei dem Upload über den CM handelt es sich um ein sogenanntes Artefakt. Dieses lässt sich als Repository über Composer laden. (Danke [Christian](https://github.com/contaoacademy))
+
+
+## Development notes:
+
+Code style:
+
+```shell
+vendor/bin/ecs check src --fix
+```
+

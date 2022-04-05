@@ -1,5 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of erdmannfreunde/optimist-theme-bundle.
+ *
+ * (c) Erdmann & Freunde <https://erdmann-freunde.de>
+ *
+ * @license LGPL-3.0-or-later
+ */
+
 namespace ErdmannFreunde\OptimistTheme\Composer;
 
 use Composer\Composer;
@@ -14,7 +24,6 @@ use Composer\Util\Filesystem;
 
 class Plugin implements PluginInterface, EventSubscriberInterface
 {
-
     /**
      * {@inheritdoc}
      */
@@ -38,6 +47,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     {
         $operation = $event->getOperation();
 
+        $package = null;
         if ($operation instanceof InstallOperation) {
             $package = $operation->getPackage();
         } elseif ($operation instanceof UpdateOperation) {
@@ -45,6 +55,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         }
 
         if (null === $package || $package->getName() !== 'erdmannfreunde/optimist-theme-bundle') {
+            dd($package);
             return;
         }
 
@@ -54,9 +65,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         $source = $event->getComposer()->getInstallationManager()->getInstallPath($package).'/skeleton';
 
         if (is_dir($target.'/files/theme') && !$filesystem->isDirEmpty($target.'/files/theme')) {
-            $event->getIO()->writeError(
-                'OPTIMIST Theme Demo: Cannot install theme files because folder "/files/theme" exists. Remove/rename the folder and make sure that you have a backup of the files inside "/files/theme" and "/templates/theme" folders.'
-            );
+            $event->getIO()->writeError('OPTIMIST Theme Demo: Cannot install theme files because folder "/files/theme" exists. Remove/rename the folder and make sure that you have a backup of the files inside "/files/theme" and "/templates/theme" folders.');
 
             return;
         }
