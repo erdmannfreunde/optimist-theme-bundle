@@ -29,8 +29,6 @@ class Plugin implements PluginInterface
         $target = \dirname($composer->getConfig()->get('vendor-dir'));
         $source = realpath(__DIR__.'/../../skeleton');
 
-        dd($source);
-
         if (is_dir($target.'/files/theme') && !$filesystem->isDirEmpty($target.'/files/theme')) {
             $io->writeError('OPTIMIST Theme Demo: Cannot install theme files because folder "/files/theme" exists. Remove/rename the folder and make sure that you have a backup of the files inside "/files/theme" and "/templates/theme" folders.');
 
