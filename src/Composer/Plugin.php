@@ -54,8 +54,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
             $package = $operation->getTargetPackage();
         }
 
-        if (null === $package || $package->getName() !== 'erdmannfreunde/optimist-theme-bundle') {
-            dd($package);
+        if (null === $package || 'erdmannfreunde/optimist-theme-bundle' !== $package->getName()) {
             return;
         }
 
