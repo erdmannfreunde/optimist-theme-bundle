@@ -69,16 +69,20 @@
   // padding creation
   @for $i from 1 through $grid__columns { // [3][4]
     .article-#{$current}-#{$i} {
-      display: grid;
-      grid-template-columns: repeat($grid__columns, 1fr);
-      grid-gap: var(--grid__gutter);
 
-      .inside { // [2][3]
-        @extend %column-floating;
+      > .inside {
+        display: grid;
+        grid-template-columns: repeat($grid__columns, 1fr);
+        column-gap: var(--grid__gutter);
 
-        @supports not (display: grid) {
-          padding-left: 0;
-          padding-right: 0;
+
+        > * { // [2][3]
+          @extend %column-floating;
+
+          @supports not (display: grid) {
+            padding-left: 0;
+            padding-right: 0;
+          }
         }
       }
     }
@@ -88,7 +92,7 @@
   @include media-query(screen-#{$current}) { // [2]
 
     @for $i from 1 through $grid__columns { // [3][4]
-      .article-#{$current}-#{$i} .inside { // [2][3]
+      .article-#{$current}-#{$i} .inside > * { // [2][3]
         grid-column-end: span $i;
 
         @supports not (display: grid) {
@@ -96,7 +100,7 @@
         }
       }
 
-      .article-start-#{$current}-#{$i} .inside {
+      .article-start-#{$current}-#{$i} .inside > * {
         grid-column-start: $i;
       }
     }
