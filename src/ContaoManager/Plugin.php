@@ -17,21 +17,5 @@ use Contao\ManagerPlugin\Config\ExtensionPluginInterface;
 
 class Plugin implements ExtensionPluginInterface
 {
-    /**
-     * Allows a plugin to override extension configuration.
-     *
-     * @param string $extensionName
-     *
-     * @return array<string,mixed>
-     */
-    public function getExtensionConfig($extensionName, array $extensionConfigs, ContainerBuilder $container)
-    {
-        if ('contao' === $extensionName) {
-            foreach ($extensionConfigs as $id => $config) {
-                $extensionConfigs[$id]['localconfig'] = array_merge($config['localconfig'] ?? [], ['folderUrl' => true]);
-            }
-        }
 
-        return $extensionConfigs;
-    }
 }
