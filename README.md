@@ -1,17 +1,20 @@
 # CONTAO THEME OPTIMIST
 OPTIMIST ist ein kostenloses Contao Theme für einfache Websites. 
 
-- [Weitere Infos](https://erdmann-freunde.de/produkte/contao-themes/optimist/)
-- [Demo](http://optimist.erdmann-freunde.de/)
+- [Weitere Infos](https://erdmann-freunde.de/contao-themes/optimist)
+- [Demo](http://optimist.contao-theme.de/)
 
 ## 1. Voraussetzungen und Abhängigkeiten
-- min. Contao 4.9.2
+- Contao 4.9 oder 4.13
 - [euf_nutshell] & [contao-grid-bundle] (werden mit dem Theme installiert)
 
 ## 2. Download & Installation
-siehe [Video-Anleitung](https://erdmann-freunde.de/produkte/contao-themes/optimist/installation/)
+Wie du das Theme installierst, erfährst du in dieser [Video-Anleitung](https://erdmann-freunde.de/produkte/contao-themes/optimist/installation/).
 
-## 3. CSS-Klassen Übersicht
+## 3. Tipps für Einsteiger
+Für Einsteiger haben wir [Tipps zum Einstieg in OPTIMIST](https://erdmann-freunde.de/contao-themes/optimist/installation#einstieg) zusammengestellt.
+
+## 4. CSS-Klassen Übersicht
 | Gruppe            | CSS-Klasse                        | Erklärung                                                                                                                                                                                                                                                                                            | zugehörige Datei                 |
 |-------------------|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | **Abstände**      | `m-t-1` bis `m-t-5`               | Einfacher bis Fünffacher Außenbstand nach oben (m-t = margin-top). Als Basis dient `--base-spacing-unit`                                                                                                                                                                                             | trumps/_helper                   |
@@ -50,7 +53,7 @@ siehe [Video-Anleitung](https://erdmann-freunde.de/produkte/contao-themes/optimi
 |                   | `border-bottom`                   | Fügt dem Element/Artikel einen Rahmen unte hinzu                                                                                                                                                                                                                                                     | trumps/_helper                   |
 |                   | `block--center`                   | Platziert das Element mittig (margin-left/-right: auto)                                                                                                                                                                                                                                              | trumps/_helper                   |
 
-## 4. Optimist über Composer aktualisieren
+## 5. Optimist über Composer aktualisieren
 Ein Upload über den Contao Manager führt dazu, dass sich Contao nicht mehr ohne weitere Vorkehrungen über Composer aktualisieren lässt. Dies lässt sich erreichen, indem man in der composer.json im Projektverzeichnis folgende Angaben ergänzt:
 
 ```
