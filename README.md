@@ -1,5 +1,5 @@
 ---
-👉 **[Am 20.01.2023 startet der nächste OPTIMIST TRAINING CLUB! Lerne, wie du OPTIMIST optimal einsetzt.](https://erdmann-freunde.de/contao-themes/optimist/otc)** 👈
+👉 **[Am 20.01.2023 startet der nächste OPTIMIST TRAINING CLUB! Lerne, wie du OPTIMIST optimal einsetzt.](https://erdmann-freunde.de/contao-themes/optimist/otc)**
 
 ---
 
