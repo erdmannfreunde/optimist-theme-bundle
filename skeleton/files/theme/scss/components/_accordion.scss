@@ -8,26 +8,7 @@
 // COMPONENTS/ACCORDION
 // --------------------------------------------------
 
-@import '../../nutshell/scss/components/accordion';
-
-// --------------------------------------------------
-
-// CSS-VARIABLES
-:root {
-  --accordion-padding:       0 var(--base-spacing-unit) var(--base-spacing-unit);
-  --accordion-background:    var(--color-page-background);
-  --accordion-border-radius: var(--base-border-radius);
-  --accordion-border:        var(--base-border);
-
-  --toggler-font-size:       var(--base-font-size);
-  --toggler-background:      transparent;
-  --toggler-color:           inherit;
-  --toggler-border:          var(--base-border);
-  --toggler-padding:         var(--base-spacing-unit--sm) var(--base-spacing-unit--sm);
-  --toggler-icon-size:       1;
-
-  --toggler-font-weight:     700;
-}
+@import '../../../assets/nutshell/scss/components/accordion';
 
 // --------------------------------------------------
 
@@ -37,10 +18,10 @@
   align-self: start;
 
   .toggler {
-    --card-padding: var(--toggler-padding);
+    --card-padding: var(--accordion-toggler-spacing);
     @include card;
 
-    font-weight: var(--toggler-font-weight);
+    font-weight: var(--accordion-toggler-font-weight);
     vertical-align: middle;
     -webkit-transition: border-radius 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
     transition: border-radius 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
@@ -82,7 +63,7 @@
   }
 
   .accordion {
-    border: var(--accordion-border);
+    border: var(--accordion-content-border);
     border-top: none;
   }
 

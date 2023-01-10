@@ -8,18 +8,7 @@
 // COMPONENTS/NEWS
 // --------------------------------------------------
 
-// SASS-VARIABLES
-$news-grid-columns--sm: 1;
-$news-grid-columns--md: 2;
-$news-grid-columns--lg: 3;
-
-// --------------------------------------------------
-
-@import '../../nutshell/scss/components/news';
-
-// --------------------------------------------------
-
-// CSS-VARIABLES
+@import '../../../assets/nutshell/scss/components/news';
 
 // --------------------------------------------------
 
@@ -27,14 +16,14 @@ $news-grid-columns--lg: 3;
 // [2] images will only be shown in .layout_latest
 .news-list {
   display: grid;
-  grid-row-gap: var(--grid__gutter);
-  margin-bottom: var(--grid__gutter);
+  grid-row-gap: var(--grid-gutter);
+  margin-bottom: var(--grid-gutter);
 
   > {
     #{headings()} {
       @extend %_h5;
 
-      margin-bottom: var(--base-spacing-unit--sm);
+      margin-bottom: var(--base-spacing-unit-sm);
     }
   }
 
@@ -96,7 +85,7 @@ $news-grid-columns--lg: 3;
 
     .info {
       color: var(--color-gray);
-      font-size: var(--base-font-size--xs);
+      font-size: var(--base-font-size-xs);
       margin-bottom: var(--base-spacing-unit);
 	  }
 
@@ -126,7 +115,7 @@ $news-grid-columns--lg: 3;
             flex-direction: column;
 
     .info {
-      font-size: var(--base-font-size--xs);
+      font-size: var(--base-font-size-xs);
       margin-bottom: var(--base-spacing-unit);
 	  }
 
@@ -144,7 +133,7 @@ $news-grid-columns--lg: 3;
     }
 
     .more {
-      font-size: var(--base-font-size--xs);
+      font-size: var(--base-font-size-xs);
       margin-bottom: 0;
 
       a {
@@ -161,7 +150,7 @@ $news-grid-columns--lg: 3;
 
     time {
       display: block;
-      font-size: var(--base-font-size--xs);
+      font-size: var(--base-font-size-xs);
       padding-top: 0;
     }
 
@@ -178,14 +167,14 @@ $news-grid-columns--lg: 3;
 
 
 .news-grid {
-  grid-row-gap: var(--grid__gutter);
+  grid-row-gap: var(--grid-gutter);
 
   @supports not(display: grid) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: calc(-1 * var(--grid__gutter) / 2);
-    margin-right: calc(-1 * var(--grid__gutter) / 2);
+    margin-left: calc(-1 * var(--grid-gutter) / 2);
+    margin-right: calc(-1 * var(--grid-gutter) / 2);
   }
 
   .layout_short,
@@ -231,7 +220,7 @@ $news-grid-columns--lg: 3;
   }
 
   .info {
-    font-size: var(--base-font-size--xs);
+    font-size: var(--base-font-size-xs);
   }
 
   .ce_text {
@@ -250,14 +239,14 @@ $news-grid-columns--lg: 3;
 
   .pagination {
     @supports not (display: grid) {
-      padding-left: var(--grid__gutter--half);
-      padding-right: var(--grid__gutter--half);
+      padding-left: var(--grid-gutter-half);
+      padding-right: var(--grid-gutter-half);
     }
   }
 
   .layout_simple {
     time {
-      font-size: var(--base-font-size--xs);
+      font-size: var(--base-font-size-xs);
     }
 
     a {
@@ -276,7 +265,7 @@ $news-grid-columns--lg: 3;
     #{headings()} {
       @extend %_h5;
 
-      margin-bottom: var(--base-spacing-unit--sm);
+      margin-bottom: var(--base-spacing-unit-sm);
     }
   }
 
@@ -284,7 +273,7 @@ $news-grid-columns--lg: 3;
   .active {
     text-decoration: none;
     color: inherit;
-    font-family: var(--hl__font-family);
+    font-family: var(--headings-font-family);
   }
 
   .level_2 {
@@ -295,7 +284,7 @@ $news-grid-columns--lg: 3;
 
       &::before {
         content: '»';
-        margin-right: calc(var(--base-spacing-unit--xs) / 2);
+        margin-right: calc(var(--base-spacing-unit-xs) / 2);
       }
     }
   }
@@ -303,7 +292,7 @@ $news-grid-columns--lg: 3;
   .year {
     > a,
     > .active {
-      font-weight: var(--headings__font-weight);
+      font-weight: var(--headings-font-weight);
     }
   }
 }

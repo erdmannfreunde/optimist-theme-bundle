@@ -13,6 +13,9 @@ $border-color: #777777;
 
 // --------------------------------------------------
 
+@import 'mixins/general';
+@import 'mixins/responsive';
+@import 'config';
 @import 'variables';
 
 // --------------------------------------------------
@@ -43,14 +46,14 @@ $border-color: #777777;
     a {
       border-radius: var(--base-border-radius);
       background: var(--color-btn);
-      color: var(--color-text--inverted);
+      color: var(--color-text-inverted);
     }
   }
 
   .btn--secondary {
     a {
       border-radius: var(--base-border-radius);
-      color: var(--color-text--inverted);
+      color: var(--color-text-inverted);
       border: var(--base-border-width) solid var(--color-brand-secondary);
       background: var(--color-brand-secondary);
     }

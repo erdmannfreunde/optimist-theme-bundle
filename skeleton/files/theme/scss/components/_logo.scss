@@ -8,14 +8,13 @@
 // COMPONENTS/LOGO
 // --------------------------------------------------
 
-// CSS-VARIABLES
-
-// --------------------------------------------------
-
 // company brand
 .logo {
   pointer-events: auto;
-  padding-bottom: var(--base-spacing-unit);
+
+  @include media-query(screen-menu) {
+    padding-bottom: var(--base-spacing-unit);
+  }
 
   img {
     margin-left: 0;

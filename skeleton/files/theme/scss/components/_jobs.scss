@@ -8,10 +8,6 @@
 // COMPONENTS/FACTS
 // --------------------------------------------------
 
-// CSS-VARIABLES
-
-// --------------------------------------------------
-
 .job__item {
   border: var(--base-border);
   padding: var(--base-spacing-unit) var(--base-spacing-unit) 0;
@@ -31,8 +27,8 @@
   }
 
   p {
-    color: var(--color-text--light);
-    font-size: var(--base-font-size--xs);
+    color: var(--color-text-light);
+    font-size: var(--base-font-size-xs);
   }
 
   p:last-child {
@@ -49,8 +45,8 @@
     }
 
     a {
-      padding-top: var(--base-spacing-unit--sm);
-      padding-bottom: var(--base-spacing-unit--sm);
+      padding-top: var(--base-spacing-unit-sm);
+      padding-bottom: var(--base-spacing-unit-sm);
       display: block;
       text-decoration: none;
     }

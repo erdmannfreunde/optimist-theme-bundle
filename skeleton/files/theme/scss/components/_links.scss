@@ -8,38 +8,15 @@
 // COMPONENTS/LINKS
 // --------------------------------------------------
 
-@import '../../nutshell/scss/components/links';
-
-// --------------------------------------------------
-
-// CSS-VARIABLES
-:root {
-  --button-bg:                      var(--color-btn);
-  --button-border-radius:           2rem;
-  --btn-font-family:                var(--base-font-family-1);
-  --btn-font-weight:                700;
-  --button-spacing:                 var(--base-spacing-unit--xs) var(--base-spacing-unit);
-
-  --button-bg-hover:                var(--color-btn-hover);
-
-  --button-primary-shadow:          0 10px 40px 0 rgba(50, 50, 50, 0.25);
-
-  --btn--secondary-color:           var(--color-brand-secondary);
-  --btn--secondary-color--dark:     var(--color-brand-secondary-dark);
-
-  --btn--primary-highlight-bg:      var(--color-text);
-  --btn--primary-highlight-text:    var(--color-text--inverted);
-
-  --btn--secondary-highlight-text:  var(--color-text--inverted);
-}
+@import '../../../assets/nutshell/scss/components/links';
 
 // --------------------------------------------------
 
 a {
-  color: var(--color-links);
+  color: var(--links-color);
 
   &:hover {
-    --color-links: var(--color-links-hover);
+    --links-color: var(--links-color-hover);
   }
 }
 
@@ -54,16 +31,14 @@ span,
 button {
   &.btn--primary {
     text-decoration: none;
-    -webkit-transition: background 0.3s, -webkit-box-shadow 0.3s;
-    transition: background 0.3s, -webkit-box-shadow 0.3s;
-    transition: background 0.3s, box-shadow 0.3s;
-    transition: background 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
 
     &:hover {
-      --button-bg: var(--button-bg-hover);
-      --button-text: var(--color-text--inverted);
-      -webkit-box-shadow: var(--button-primary-shadow);
-              box-shadow: var(--button-primary-shadow);
+      -webkit-box-shadow: var(--button-shadow-primary);
+              box-shadow: var(--button-shadow-primary);
     }
 
     p & {
@@ -74,14 +49,14 @@ button {
 
   &.btn--secondary {
     border-radius: var(--button-border-radius);
-    color: var(--color-text--inverted);
-    border: var(--base-border-width) solid var(--btn--secondary-color);
-    background: var(--btn--secondary-color);
-    -webkit-transition: background 0.3s;
-    transition: background 0.3s;
+    color: var(--button-color-secondary);
+    border: var(--button-border-width) solid var(--button-background-secondary);
+    background: var(--button-background-secondary);
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
 
     &:hover {
-      --btn--secondary-color: var(--btn--secondary-color--dark);
+      --button-background-secondary: var(--button-background-secondary-hover);
     }
 
     p & {
@@ -91,7 +66,7 @@ button {
   }
 }
 
-// [2] button used in a .band--highlight container
+// [2] button used in a .article--highlight container
 div {
   &.btn--primary {
     a {
@@ -105,9 +80,13 @@ div {
                 box-shadow: var(--button-primary-shadow);
       }
 
-      .band--highlight & { // [2]
-        background-color: var(--btn--primary-highlight-bg);
-        color: var(--btn--primary-highlight-text);
+      .article--highlight & { // [2]
+        --button-background: var(--button-background-highlight);
+        --button-color: var(--button-color-highlight);
+
+        &:hover {
+          --button-background: var(--button-background-highlight-hover);
+        }
       }
     }
   }
@@ -115,14 +94,14 @@ div {
   &.btn--secondary {
     a {
       border-radius: var(--button-border-radius);
-      color: var(--color-text--inverted);
-      border: var(--base-border-width) solid var(--btn--secondary-color);
-      background: var(--btn--secondary-color);
-      -webkit-transition: background 0.3s;
-      transition: background 0.3s;
+      color: var(--color-text-inverted);
+      border: var(--base-border-width) solid var(--button-background-secondary);
+      background-color: var(--button-background-secondary);
+      -webkit-transition: background-color 0.3s;
+      transition: background-color 0.3s;
 
       &:hover {
-        --btn--secondary-color: var(--btn--secondary-color--dark);
+        --button-background-secondary: var(--button-background-secondary-hover);
       }
     }
   }

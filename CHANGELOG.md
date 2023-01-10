@@ -1,9 +1,17 @@
 # CHANGELOG:
 
+## 2.0.0 (XX.XX.2023)
+- OPTIMIST verwendet nun das Nutshell Framework V2
+  - Variablen folgen nun einer einheitlichen Benennung
+  - alle CSS-Variablen sind nun in der _variables.scss zu finden
+  - alle Sass-Variablen sind nun in der _config.scss zu finden
+- `.card` und `.fact` Elemente werden nun per Flexbox gestaltet
+- CSS-Klassen können nun über die Theme Toolbox vergeben werden
+- kleinere Grid-Optimierungen
+
 ## 1.3.0 (16.02.2022)
 - OPTIMIST für Contao 4.13 optimiert
 - Contao 4.12 Support eingestellt
-
 
 ## 1.2.0 (20.09.2021)
 - OPTIMIST für Contao 4.12 optimiert

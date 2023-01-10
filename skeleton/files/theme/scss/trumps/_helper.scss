@@ -8,15 +8,11 @@
 // TRUMPS/HELPER
 // --------------------------------------------------
 
-// CSS-VARIABLES
-
-// --------------------------------------------------
-
 // sass-lint:disable no-universal-selectors, force-element-nesting
 
 .text--inverted,
 .text--inverted * {
-  color: var(--color-text--inverted);
+  color: var(--color-text-inverted);
 }
 
 .border-top {
@@ -61,20 +57,20 @@
 // [1] length($breakpoints) - go through length of available viewports (xs, sm, md, lg, xl == 5)
 // [2] $current - actual viewport (e.g. "xs")
 // [3] $i - counter, returns the actual grid-column
-// [4] $grid__columns - go through available columns (e.g. 1 --> 12)
+// [4] $grid-columns - go through available columns (e.g. 1 --> 12)
 @for $size from 1 through length($breakpoints) { // [1]
   $x:   nth($breakpoints, $size); // [2]
   $current:   nth($x, 1); // [2]
 
-  // padding creation
-  @for $i from 1 through $grid__columns { // [3][4]
+  // grid creation
+  @for $i from 1 through $grid-columns { // [3][4]
     .article-#{$current}-#{$i} {
-
       > .inside {
         display: grid;
-        grid-template-columns: repeat($grid__columns, 1fr);
-        column-gap: var(--grid__gutter);
-
+        grid-template-columns: repeat($grid-columns, 1fr);
+        -webkit-column-gap: var(--grid-gutter);
+           -moz-column-gap: var(--grid-gutter);
+                column-gap: var(--grid-gutter);
 
         > * { // [2][3]
           @extend %column-floating;
@@ -91,7 +87,7 @@
   // width creation for every article- class
   @include media-query(screen-#{$current}) { // [2]
 
-    @for $i from 1 through $grid__columns { // [3][4]
+    @for $i from 1 through $grid-columns { // [3][4]
       .article-#{$current}-#{$i} .inside > * { // [2][3]
         grid-column-end: span $i;
 

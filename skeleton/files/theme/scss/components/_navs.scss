@@ -8,28 +8,7 @@
 // COMPONENTS/NAVIGATION
 // --------------------------------------------------
 
-@import '../../nutshell/scss/components/navs';
-
-// --------------------------------------------------
-
-// CSS-VARIABLES
-:root {
-  --color-navigation-main--active:    var(--color-brand);
-  --nav--main__item-padding:          0.5rem;
-  --nav--main__item-padding--sm:      0.25rem;
-  --nav--main-font-size:              0.875rem;
-  --nav--main-font-weight:            600;
-
-  --submenu-background:               var(--color-page-background);
-
-  --nav-mobile-color-background:      var(--color-page-background);
-  --nav-mobile-color-text:            var(--color-text);
-
-  --menu-icon-width:                  1.25rem;
-  --menu-icon-stroke:                 2px;
-
-  --nav--sub__item-padding:           var(--base-spacing-unit--sm);
-}
+@import '../../../assets/nutshell/scss/components/navs';
 
 // --------------------------------------------------
 
@@ -41,8 +20,8 @@
 
 .nav--main {
   line-height: 1em;
-  font-size: var(--nav--main-font-size);
-  color: var(--color-text);
+  font-size: var(--nav-main-font-size);
+  color: var(--nav-main-color);
   position: relative;
 
   // sass-lint:disable-block force-element-nesting
@@ -51,14 +30,14 @@
   strong.active,
   strong.trail,
   strong.forward {
-    padding: var(--nav--main__item-padding);
+    padding: var(--nav-main-item-padding);
     text-decoration: none;
-    font-weight: var(--nav--main-font-weight);
-    color: var(--color-navigation-main--active);
+    font-weight: var(--nav-main-font-weight);
+    color: var(--nav-main-color-active);
 
     @include media-query(screen-menu) {
-      padding: var(--nav--main__item-padding);
-      margin:  var(--nav--main__item-padding);
+      padding: var(--nav-main-item-padding);
+      margin:  var(--nav-main-item-padding);
     }
   }
 
@@ -66,7 +45,7 @@
     color: inherit;
 
     &:hover {
-      color: var(--color-navigation-main--active);
+      color: var(--nav-main-color-hover);
     }
   }
 
@@ -81,6 +60,7 @@
 
   .level_2 {
     position: absolute;
+    z-index: 1001;
     right: 0;
     width: 100%;
     -webkit-box-pack: end;
@@ -119,7 +99,7 @@
   @include media-query(screen-menu-max) {
     z-index: -1;
     visibility: hidden;
-    font-size: var(--base-font-size--xl);
+    font-size: var(--nav-mobile-font-size);
     position: fixed;
     left: 0;
     right: 0;
@@ -127,8 +107,8 @@
     bottom: 0;
     opacity: 0;
     border-top: var(--base-border);
-    background: var(--nav-mobile-color-background);
-    padding: var(--grid__gutter);
+    background: var(--nav-mobile-background);
+    padding: var(--grid-gutter);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -ms-touch-action: touch;
@@ -139,7 +119,7 @@
     .level_1 {
       a,
       strong {
-        color: var(--nav-mobile-color-text);
+        color: var(--nav-mobile-color);
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -147,7 +127,7 @@
       }
 
       strong {
-        color: var(--color-navigation-main--active);
+        color: var(--nav-main-color-active);
       }
     }
 
@@ -158,7 +138,7 @@
       strong {
         &::before {
           content: '→';
-          margin-right: var(--base-spacing-unit--xs);
+          margin-right: var(--base-spacing-unit-xs);
         }
       }
     }
@@ -182,8 +162,7 @@
   justify-self: end;
   z-index: 1002;
   pointer-events: auto;
-  color: var(--color-links);
-  padding-bottom: var(--base-spacing-unit);
+  color: var(--links-color);
 
   @include media-query(screen-menu) {
     display: none;
@@ -199,13 +178,13 @@
   margin: 0;
   cursor: pointer;
   color: currentColor;
-  padding: calc(var(--base-spacing-unit--xs)/2) var(--base-spacing-unit--xs);
+  padding: calc(var(--base-spacing-unit-xs)/2) var(--base-spacing-unit-xs);
   line-height: 1.5;
 
 
   .menu-icon {
     position: relative;
-    width: var(--menu-icon-width);
+    width: var(--nav-icon-width);
     height: 1.5rem;
     display: inline-block;
     vertical-align: middle;
@@ -217,8 +196,8 @@
     position: absolute;
     left: 0;
     top: 40%;
-    margin-top: calc(var(--menu-icon-stroke) / -2);
-    height: var(--menu-icon-stroke);
+    margin-top: calc(var(--nav-icon-stroke) / -2);
+    height: var(--nav-icon-stroke);
     -webkit-transition: -webkit-transform 0.15s ease;
     transition: -webkit-transform 0.15s ease;
     transition: transform 0.15s ease;
@@ -231,7 +210,7 @@
       display: block;
       content: '';
       width: 100%;
-      height: var(--menu-icon-stroke);
+      height: var(--nav-icon-stroke);
       -webkit-transition: opacity 0.15s, -webkit-transform 0.15s ease;
       transition: opacity 0.15s, -webkit-transform 0.15s ease;
       transition: transform 0.15s ease, opacity 0.15s;
@@ -264,14 +243,14 @@
 
   .menu-label {
     display: inline-block;
-    margin-left: var(--base-spacing-unit--xs);
-    font-size: var(--base-font-size--xl);
+    margin-left: var(--base-spacing-unit-xs);
+    font-size: var(--base-font-size-xl);
   }
 }
 
 .nav--sub {
-  margin-bottom: var(--base-spacing-unit--lg);
-  font-size: var(--base-font-size--xs);
+  margin-bottom: var(--base-spacing-unit-lg);
+  font-size: var(--base-font-size-xs);
   position: relative;
   z-index: 1000;
 
@@ -315,7 +294,7 @@
     }
 
     &:hover {
-      border-bottom: var(--base-border-width) solid var(--color-links-hover);
+      border-bottom: var(--base-border-width) solid var(--links-color-hover);
     }
   }
 
@@ -323,23 +302,23 @@
   strong.active,
   strong.trail {
     color: inherit;
-    padding: var(--nav--sub__item-padding);
+    padding: var(--nav-submenu-item-padding);
   }
 
   a:hover {
-    color: var(--color-links-hover);
+    color: var(--links-color-hover);
   }
 }
 
 .nav--meta {
   justify-self: start;
-  font-family: var(--nav--main-font);
-  font-weight: var(--nav--main-font-weight);
-  font-size: var(--base-font-size--xs);
+  font-family: var(--nav-main-font);
+  font-weight: var(--nav-main-font-weight);
+  font-size: var(--base-font-size-xs);
 
   ul {
     display: grid;
-    grid-column-gap: var(--grid__gutter--half);
+    grid-column-gap: var(--grid-gutter-half);
 
     @include media-query(screen-md) {
       grid-template-columns: repeat(2, 1fr);
@@ -360,14 +339,19 @@
   a,
   strong.active,
   strong.trail {
-    padding: 0 var(--base-spacing-unit--sm);
+    padding: 0 var(--base-spacing-unit-sm);
     text-decoration: none;
     color: inherit;
     font-weight: normal;
     padding-left: 0;
+
+    &.last {
+      padding-right: 0;
+    }
   }
 }
 
 .nav--meta + .nav--meta {
   justify-self: end;
+  text-align: right;
 }

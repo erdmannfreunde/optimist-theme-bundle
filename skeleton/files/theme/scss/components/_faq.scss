@@ -8,18 +8,10 @@
 // COMPONENTS/FAQ
 // --------------------------------------------------
 
-@import '../../nutshell/scss/components/faq';
+@import '../../../assets/nutshell/scss/components/faq';
 
 // --------------------------------------------------
 
-// CSS-VARIABLES
-:root {
-  --faq-border: none;
-}
-
-// --------------------------------------------------
-
-// PUT YOUR OWN STYLES HERE
 .faq-list {
   > #{headings()} {
     @extend %_h4;
@@ -38,11 +30,11 @@
     a {
       &::before {
         content: '→';
-        margin-right: var(--base-spacing-unit--xs);
+        margin-right: var(--base-spacing-unit-xs);
       }
 
       &:hover {
-        color: var(--color-links-hover);
+        color: var(--links-color-hover);
       }
     }
   }

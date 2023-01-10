@@ -8,16 +8,11 @@
 // COMPONENTS/FORMS
 // --------------------------------------------------
 
-@import '../../nutshell/scss/components/forms';
-
-// --------------------------------------------------
-
-// CSS-VARIABLES
+@import '../../../assets/nutshell/scss/components/forms';
 
 // --------------------------------------------------
 
 // sass-lint:disable-block force-element-nesting
-
 .ce_form {
   --card-border: none;
   @include card;
@@ -28,7 +23,7 @@
   margin-bottom: var(--base-spacing-unit);
 
   @include media-query(screen-lg) {
-    --card-padding: var(--base-spacing-unit--lg);
+    --card-padding: var(--base-spacing-unit-lg);
   }
 
   #{headings()} {
@@ -39,12 +34,14 @@
 .form--sticky {
   position: sticky;
   top: var(--base-spacing-unit);
+  -ms-flex-item-align: start;
+      align-self: start;
 }
 
 input.text,
 input.captcha,
 textarea {
-  padding: var(--base-spacing-unit--xs) var(--base-spacing-unit--sm);
+  padding: var(--base-spacing-unit-xs) var(--base-spacing-unit-sm);
 }
 
 input.radio,
@@ -56,7 +53,7 @@ input.checkbox {
   select {
     width: 100%;
     margin-left: 0;
-    height: calc((1rem * var(--base-line-height)) + var(--base-spacing-unit--sm));
+    height: calc((1rem * var(--base-line-height)) + var(--base-spacing-unit-sm));
   }
 }
 

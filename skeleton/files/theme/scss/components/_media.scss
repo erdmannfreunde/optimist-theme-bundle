@@ -8,21 +8,13 @@
 // COMPONENTS/MEDIA
 // --------------------------------------------------
 
-// CSS-VARIABLES
-:root {
-  --image-border:  var(--base-border);
-  --image-caption-padding: var(--base-spacing-unit);
-}
-
-// --------------------------------------------------
-
-@import '../../nutshell/scss/components/media';
+@import '../../../assets/nutshell/scss/components/media';
 
 // --------------------------------------------------
 
 .ce_image {
   @supports not(display: grid) {
-    margin-bottom: var(--grid__gutter);
+    margin-bottom: var(--grid-gutter);
   }
 
   a {
@@ -60,7 +52,7 @@
   .float_left,
   .float_right {
     position: relative;
-    margin-bottom: var(--grid__gutter);
+    margin-bottom: var(--grid-gutter);
 
     @include media-query(screen-sm) {
       max-width: 50%;
@@ -70,18 +62,18 @@
 
   .float_left {
     @include media-query(screen-sm) {
-      margin-right: var(--grid__gutter);
+      margin-right: var(--grid-gutter);
     }
   }
 
   .float_right {
     @include media-query(screen-sm) {
-      margin-left: var(--grid__gutter);
+      margin-left: var(--grid-gutter);
     }
   }
 
   .caption {
-    font-size: var(--base-font-size--xs);
+    font-size: var(--base-font-size-xs);
     font-style: italic;
   }
 }

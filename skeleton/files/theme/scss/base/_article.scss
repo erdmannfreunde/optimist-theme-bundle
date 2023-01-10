@@ -1,0 +1,88 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+//
+// BASE/ARTICLE
+// --------------------------------------------------
+
+@import '../../../assets/nutshell/scss/base/article';
+
+// --------------------------------------------------
+
+.article--highlight {
+  background: var( --article-highlight-background);
+  color: var( --article-highlight-color);
+
+  a {
+    color: inherit;
+  }
+}
+
+.article--bubble-left {
+  background-image: url('/files/theme/img/background-bubble-left.svg');
+  background-repeat: no-repeat;
+  background-position: -1% 0;
+}
+
+.article--bubble-right {
+  background-image: url('/files/theme/img/background-bubble-right.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.article--tint {
+  background-color: var(--article-tint-background);
+  background-repeat: no-repeat;
+  background-position: 50% 101%;
+
+  > .inside {
+    padding-top:    var(--base-spacing-unit-lg);
+    padding-bottom: var(--base-spacing-unit-lg);
+
+    @include media-query(screen-md) {
+      padding-top:    calc(2 * var(--base-spacing-unit-xl));
+      padding-bottom: calc(2 * var(--base-spacing-unit-xl));
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(1.5 * var(--base-spacing-unit-xl));
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: 100% 100%;
+  }
+
+  &::before {
+    top: 0;
+    background-image: url('/files/theme/img/background-bubble-bottom.svg');
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background-position-y: 0;
+  }
+
+  &::after {
+    background-image: url('/files/theme/img/background-bubble-bottom.svg');
+    bottom: 0;
+  }
+
+  .inside {
+    position: relative;
+    z-index: 1001;
+  }
+}
+
+.article--dark {
+  background: var( --article-dark-background);
+  color: var(--article-dark-color);
+}

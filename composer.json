@@ -19,7 +19,7 @@
         "php": ">=7.1",
         "composer-plugin-api": "^2.0",
         "contao/manager-bundle": "^4.9",
-        "erdmannfreunde/euf_nutshell": "^1.0",
+        "nutshell-framework/nutshell": "2.x-dev",
         "erdmannfreunde/contao-grid-bundle": "^1.0",
         "erdmannfreunde/theme-toolbox": "^2.0"
     },

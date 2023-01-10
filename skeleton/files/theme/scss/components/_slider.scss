@@ -8,19 +8,7 @@
 // COMPONENTS/SLIDER
 // --------------------------------------------------
 
-@import '../../nutshell/scss/components/slider';
-
-// --------------------------------------------------
-
-// CSS-VARIABLES
-:root {
-  --arrow-color:               var(--color-brand);
-  --arrow-size:                2rem;
-  --menu-point-size:           2rem;
-  --menu-point-color:          inherit;
-  --menu-point-color--active:  var(--color-brand);
-  --arrow-padding:              var(--base-spacing-unit--sm);
-}
+@import '../../../assets/nutshell/scss/components/slider';
 
 // --------------------------------------------------
 
@@ -32,22 +20,28 @@
     }
   }
 
-  .slider-control a {
-    width: calc(var(--arrow-size) + var(--arrow-padding) * 2);
-    height: calc(var(--arrow-size) + var(--arrow-padding) * 2);
-    overflow: hidden;
-    font-family: var(--base-font-family);
+  .slider-control {
+    a {
+      width: calc(var(--slider-arrow-size) + var(--slider-arrow-padding) * 2);
+      height: calc(var(--slider-arrow-size) + var(--slider-arrow-padding) * 2);
+      overflow: hidden;
+      font-family: var(--base-font-family);
+    }
   }
 
-  .slider-prev:before {
-    content: '←';
+  .slider-prev {
+    &::before {
+      content: '←';
+    }
   }
 
-  .slider-next:before {
-    content: '→';
+  .slider-next {
+    &::before {
+      content: '→';
+    }
   }
 
   .slider-menu {
-    font-size: var(--menu-point-size);
+    font-size: var(--slider-menu-point-size);
   }
 }

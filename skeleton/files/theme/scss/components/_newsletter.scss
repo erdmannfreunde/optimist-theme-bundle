@@ -12,15 +12,7 @@
 // COMPONENTS/NEWSLETTER
 // --------------------------------------------------
 
-@import '../../nutshell/scss/components/newsletter';
-
-// --------------------------------------------------
-
-// CSS-VARIABLES
-:root {
-  --newsletter-list-font-family: var(--headings__font-family);
-  --newsletter-list-font-weight: var(--headings__font-weight);
-}
+@import '../../../assets/nutshell/scss/components/newsletter';
 
 // --------------------------------------------------
 
@@ -41,7 +33,7 @@
   button.submit {
     @extend button.btn--secondary;
 
-    margin-left: var(--base-spacing-unit--sm);
+    margin-left: var(--base-spacing-unit-sm);
   }
 }
 
@@ -54,7 +46,7 @@
   button.submit {
     @extend button.btn--secondary;
 
-    margin-left: var(--base-spacing-unit--sm);
+    margin-left: var(--base-spacing-unit-sm);
   }
 }
 
@@ -71,5 +63,5 @@
 
 .newsletter-reader {
   padding-top: var(--base-spacing-unit);
-  padding-bottom: var(--base-spacing-unit--sm);
+  padding-bottom: var(--base-spacing-unit-sm);
 }

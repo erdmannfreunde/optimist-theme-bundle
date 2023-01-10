@@ -1,0 +1,29 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Theme
+// * erdmann-freunde.de/produkte/contao-themes/optimist/
+// *
+
+
+//
+// MIXINS/RESPONSIVE
+// --------------------------------------------------
+$wrapper-max:   72em;
+
+// $additional_breakpoints will be used in _grid.scss to generate grid classes
+$additional_breakpoints: (
+  menu: (
+    min:        52em, // 768px
+    max:        (52em - 0.0625em), // 767px
+  )
+);
+// --------------------------------------------------
+
+// COMPONENTS/NEWS
+// --------------------------------------------------
+$news-grid-columns-sm: 1;
+$news-grid-columns-md: 2;
+$news-grid-columns-lg: 3;
+// --------------------------------------------------
+
+@import '../../../assets/nutshell/scss/config';

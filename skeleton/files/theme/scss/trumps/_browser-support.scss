@@ -12,14 +12,14 @@
 $browser-support-background:    #FFF8EA;
 $browser-support-border:        2px solid #E25600;
 $base-spacing-unit:             1rem;
-$base-font-size--xs:            0.875rem;
+$base-font-size-xs:            0.875rem;
 
 // --------------------------------------------------
 
 .browser-support {
   margin-top: $base-spacing-unit;
   margin-bottom: $base-spacing-unit;
-  font-size: $base-font-size--xs;
+  font-size: $base-font-size-xs;
 
   > .inside {
     @include wrapper-max;

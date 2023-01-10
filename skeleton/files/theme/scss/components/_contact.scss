@@ -8,10 +8,6 @@
 // COMPONENTS/CONTACT
 // --------------------------------------------------
 
-// CSS-VARIABLES
-
-// --------------------------------------------------
-
 .ce_contact {
   display: grid;
   grid-template-rows: -webkit-min-content 1fr;
@@ -36,7 +32,7 @@
 
   .text_container {
     height: auto;
-    padding: var(--base-spacing-unit) var(--base-spacing-unit) var(--base-spacing-unit--lg);
+    padding: var(--base-spacing-unit) var(--base-spacing-unit) var(--base-spacing-unit-lg);
     border: var(--base-border);
   }
 }
