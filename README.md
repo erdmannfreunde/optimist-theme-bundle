@@ -10,11 +10,11 @@ OPTIMIST ist ein kostenloses Contao Theme für einfache Websites.
 - [Demo](http://optimist.contao-theme.de/)
 
 ## 1. Voraussetzungen und Abhängigkeiten
-- Contao 4.9 oder 4.13
-- [euf_nutshell] & [contao-grid-bundle] (werden mit dem Theme installiert)
+- Contao 4.13
+- [nutshell-framework/assets](https://github.com/nutshell-framework/assets) & [contao-grid-bundle](https://github.com/erdmannfreunde/contao-grid-bundle) (werden mit dem Theme installiert)
 
 ## 2. Download & Installation
-Wie du das Theme installierst, erfährst du in dieser [Video-Anleitung](https://erdmann-freunde.de/produkte/contao-themes/optimist/installation/).
+Wie du das Theme installierst, erfährst du in dieser [Video-Anleitung](https://erdmann-freunde.de/produkte/contao-themes/optimist/installation).
 
 ## 3. Tipps für Einsteiger
 Für Einsteiger haben wir [Tipps zum Einstieg in OPTIMIST](https://erdmann-freunde.de/contao-themes/optimist/installation#einstieg) zusammengestellt.
@@ -26,7 +26,7 @@ Für Einsteiger haben wir [Tipps zum Einstieg in OPTIMIST](https://erdmann-freun
 |                   | `m-b-1` bis `m-b-5`               | Einfacher bis Fünffacher Außenabstand nach unten                                                                                                                                                                                                                                                     | trumps/_helper                   |
 |                   | `p-t-1` bis `p-t-5`               | Einfacher bis Fünffacher Innenabstand nach oben                                                                                                                                                                                                                                                      | trumps/_helper                   |
 |                   | `p-b-1` bis `p-b-5`               | Einfacher bis Fünffacher Innenabstand nach unten                                                                                                                                                                                                                                                     | trumps/_helper                   |
-| **Überschriften** | `heading--1` bis `heading--6`     | Überträgt die Größe und Abstände einer Überschrift auf verwendete Element. Beispiel: Um eine Überschrift H2 wie eine H1aussehen zu lassen, gibt man der Überschrift die CSS-Klasse heading--1                                                                                                        | base/_type                       |
+| **Überschriften** | `heading--1` bis `heading--6`     | Überträgt die Größe und Abstände einer Überschrift auf das verwendete Element. Beispiel: Um eine Überschrift H2 wie eine H1 aussehen zu lassen, gibt man der Überschrift die CSS-Klasse heading--1                                                                                                        | base/_type                       |
 |                   | `headling--left`                  | Überschrift linksbündig                                                                                                                                                                                                                                                                              | base/_type                       |
 |                   | `heading--center`                 | Überschrift zentriert                                                                                                                                                                                                                                                                                | base/_type                       |
 |                   | `heading--right`                  | Überschrift rechtsbündig                                                                                                                                                                                                                                                                             | base/_type                       |

@@ -1,6 +1,6 @@
 # CHANGELOG:
 
-## 2.0.0 (XX.XX.2023)
+## 2.0.0 (11.01.2023)
 - OPTIMIST verwendet nun das Nutshell Framework V2
   - Variablen folgen nun einer einheitlichen Benennung
   - alle CSS-Variablen sind nun in der _variables.scss zu finden
