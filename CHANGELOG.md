@@ -1,6 +1,6 @@
 # CHANGELOG:
 
-## 2.0.1 (XX.01.2023)
+## 2.0.1 (19.01.2023)
 - Überschriften-Klassen heading--1 bis 6 aus Theme entfernt, da sie nun aus dem Nutshell Framework kommen
 - MySQL-Dump um Theme-Toolbox-Anweisungen ergänzt
 
