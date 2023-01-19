@@ -5,7 +5,7 @@
     "keywords":["contao", "erdmannfreunde", "optimist", "theme"],
     "type": "composer-plugin",
     "license": "LGPL-3.0-or-later",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "authors":[
         {
             "name": "Erdmann & Freunde",

@@ -1,5 +1,8 @@
 # CHANGELOG:
 
+## 2.0.2 (19.01.2023)
+- Fix: Hilfsklassen für Artikel werden nun korrekt berücksichtigt 
+
 ## 2.0.1 (19.01.2023)
 - Überschriften-Klassen heading--1 bis 6 aus Theme entfernt, da sie nun aus dem Nutshell Framework kommen
 - MySQL-Dump um Theme-Toolbox-Anweisungen ergänzt
