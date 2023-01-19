@@ -40,14 +40,24 @@
     margin-bottom: calc(#{$i} * var(--base-spacing-unit));
   }
 
-  .p-t-#{$i},
-  .mod_article.p-t-#{$i} {
+  .p-t-#{$i} {
     padding-top: calc(#{$i} * var(--base-spacing-unit));
   }
 
-  .p-b-#{$i},
-  .mod_article.p-b-#{$i} {
+  .p-b-#{$i} {
     padding-bottom: calc(#{$i} * var(--base-spacing-unit));
+  }
+
+  .mod_article.p-t-#{$i} {
+    --article-spacing-top: calc(#{$i} * var(--base-spacing-unit));
+
+    padding-top: 0;
+  }
+
+  .mod_article.p-b-#{$i} {
+    --article-spacing-bottom: calc(#{$i} * var(--base-spacing-unit));
+
+    padding-bottom: 0;
   }
 }
 
