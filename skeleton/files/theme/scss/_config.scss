@@ -9,12 +9,13 @@
 // MIXINS/RESPONSIVE
 // --------------------------------------------------
 $wrapper-max:   72em;
+$max-diff:      0.00125em;
 
 // $additional_breakpoints will be used in _grid.scss to generate grid classes
 $additional_breakpoints: (
   menu: (
-    min:        52em, // 768px
-    max:        (52em - 0.0625em), // 767px
+    min:        52em, // 832px
+    max:        (52em - $max-diff), // 831px
   )
 );
 // --------------------------------------------------
