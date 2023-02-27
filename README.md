@@ -1,8 +1,3 @@
----
-👉 **[Am 20.01.2023 startet der nächste OPTIMIST TRAINING CLUB! Lerne, wie du OPTIMIST optimal einsetzt.](https://erdmann-freunde.de/contao-themes/optimist/otc)**
-
----
-
 # CONTAO THEME OPTIMIST
 OPTIMIST ist ein kostenloses Contao Theme für einfache Websites. 
 
@@ -17,7 +12,7 @@ OPTIMIST ist ein kostenloses Contao Theme für einfache Websites.
 Wie du das Theme installierst, erfährst du in dieser [Video-Anleitung](https://erdmann-freunde.de/produkte/contao-themes/optimist/installation).
 
 ## 3. Tipps für Einsteiger
-Für Einsteiger haben wir [Tipps zum Einstieg in OPTIMIST](https://erdmann-freunde.de/contao-themes/optimist/installation#einstieg) zusammengestellt.
+Für Einsteiger haben wir [Tipps zum Einstieg in OPTIMIST](https://erdmann-freunde.de/contao-themes/optimist/anmeldung-tipps-einstieg) zusammengestellt.
 
 ## 4. CSS-Klassen Übersicht
 | Gruppe            | CSS-Klasse                        | Erklärung                                                                                                                                                                                                                                                                                            | zugehörige Datei                 |

@@ -1,5 +1,8 @@
 # CHANGELOG:
 
+## 2.0.3 (XX.XX.2023)
+- Contao Version auf 4.13 angehoben, da der MySQL-Dump in V2 nur noch für 4.13 zur Verfügung steht
+
 ## 2.0.2 (19.01.2023)
 - Fix: Hilfsklassen für Artikel werden nun korrekt berücksichtigt 
 
