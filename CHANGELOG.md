@@ -1,5 +1,8 @@
 # CHANGELOG:
 
+## 2.0.4 (09.05.2023)
+- URL zum Theme im Dateikopf angepasst
+
 ## 2.0.3 (27.02.2023)
 - Contao Version auf 4.13 angehoben, da der MySQL-Dump in V2 nur noch für 4.13 zur Verfügung steht
 
