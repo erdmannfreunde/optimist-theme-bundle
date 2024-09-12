@@ -1,5 +1,6 @@
 {
     "name": "erdmannfreunde/optimist-theme-bundle",
+    "type": "contao-theme",
     "description": "OPTIMIST Theme Bundle",
     "homepage": "https://erdmann-freunde.de/produkte/contao-themes/optimist",
     "keywords": [
@@ -8,7 +9,6 @@
         "optimist",
         "theme"
     ],
-    "type": "composer-plugin",
     "license": "LGPL-3.0-or-later",
     "version": "3.0.0",
     "authors": [
@@ -23,12 +23,18 @@
         "source": "https://github.com/erdmannfreunde/optimist-theme-bundle"
     },
     "require": {
-        "php": ">=7.1",
-        "composer-plugin-api": "^2.0",
-        "contao/manager-bundle": "^4.13",
+        "php": "^8.1",
+        "contao/manager-bundle": "5.3.*",
+        "contao/calendar-bundle": "^5.3",
+        "contao/comments-bundle": "^5.3",
+        "contao/conflicts": "@dev",
+        "contao/faq-bundle": "^5.3",
+        "contao/listing-bundle": "^5.3",
+        "contao/news-bundle": "^5.3",
+        "contao/newsletter-bundle": "^5.3",
         "nutshell-framework/nutshell": "^2.0",
-        "erdmannfreunde/contao-grid-bundle": "^1.0",
-        "erdmannfreunde/theme-toolbox": "^2.0"
+        "erdmannfreunde/contao-grid-bundle": "^2.0",
+        "erdmannfreunde/theme-toolbox": "^3.0"
     },
     "extra": {
         "contao-component-dir": "assets"
