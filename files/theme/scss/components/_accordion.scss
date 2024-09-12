@@ -1,0 +1,78 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/contao-themes/optimist
+// *
+
+//
+// COMPONENTS/ACCORDION
+// --------------------------------------------------
+
+@import '../../../assets/nutshell/scss/components/accordion';
+
+// --------------------------------------------------
+
+// default accordion
+.content-accordion {
+  display: grid;
+  align-self: start;
+
+  .handorgel__header {
+    margin-bottom: 0;
+    margin-top: var(--accordion-spacing);
+  }
+
+  .handorgel__header__button {
+    --card-padding: var(--accordion-toggler-spacing);
+    @include card;
+
+    font-weight: var(--accordion-toggler-font-weight);
+    vertical-align: middle;
+    -webkit-transition: border-radius 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+    transition: border-radius 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+    transition: border-radius 0.3s, box-shadow 0.3s, transform 0.3s;
+    transition: border-radius 0.3s, box-shadow 0.3s, transform 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+    display: inline-block;
+
+    &::before {
+      content: '→';
+      display: inline-block;
+      margin-right: var(--base-spacing-unit-xs);
+      -webkit-transition: -webkit-transform 0.3s;
+      transition: -webkit-transform 0.3s;
+      transition: transform 0.3s;
+      transition: transform 0.3s, -webkit-transform 0.3s;
+    }
+  }
+
+  .handorgel__header--open {
+    .handorgel__header__button {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom: none;
+      -webkit-transform: none;
+              transform: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+
+      &::before {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+      }
+    }
+  }
+
+  .ui-icon-triangle-1-s {
+  }
+
+  .handorgel__content {
+    border: var(--accordion-content-border);
+    border-top: none;
+  }
+
+  .content-text {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

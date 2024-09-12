@@ -1,19 +1,26 @@
 {
     "name": "erdmannfreunde/optimist-theme-bundle",
     "description": "OPTIMIST Theme Bundle",
-    "homepage": "https://erdmann-freunde.de/produkte/contao-themes/optimist/",
-    "keywords":["contao", "erdmannfreunde", "optimist", "theme"],
+    "homepage": "https://erdmann-freunde.de/produkte/contao-themes/optimist",
+    "keywords": [
+        "contao",
+        "erdmannfreunde",
+        "optimist",
+        "theme"
+    ],
     "type": "composer-plugin",
     "license": "LGPL-3.0-or-later",
-    "version": "2.0.3",
-    "authors":[
+    "version": "3.0.0",
+    "authors": [
         {
             "name": "Erdmann & Freunde",
             "homepage": "https://erdmann-freunde.de"
         }
     ],
     "support": {
-        "homepage": "https://erdmann-freunde.de"
+        "homepage": "https://erdmann-freunde.de/produkte/contao-themes/optimist",
+        "issues": "https://github.com/erdmannfreunde/optimist-theme-bundle/issues",
+        "source": "https://github.com/erdmannfreunde/optimist-theme-bundle"
     },
     "require": {
         "php": ">=7.1",
@@ -23,29 +30,15 @@
         "erdmannfreunde/contao-grid-bundle": "^1.0",
         "erdmannfreunde/theme-toolbox": "^2.0"
     },
-    "require-dev": {
-        "contao/manager-plugin": "^2.7",
-        "composer/composer": "^2.0",
-        "contao/easy-coding-standard": "^4.0"
-    },
-    "conflict": {
-        "contao/manager-plugin": "<2.0 || >= 3.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "ErdmannFreunde\\OptimistTheme\\": "src/"
-        }
-    },
     "extra": {
-        "class": "ErdmannFreunde\\OptimistTheme\\Composer\\Plugin",
-        "contao-manager-plugin": "ErdmannFreunde\\OptimistTheme\\ContaoManager\\Plugin"
+        "contao-component-dir": "assets"
     },
-    "config": {
-        "allow-plugins": {
-            "contao-components/installer": true,
-            "contao/manager-plugin": true,
-            "contao-community-alliance/composer-plugin": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        }
+    "scripts": {
+        "post-install-cmd": [
+            "@php vendor/bin/contao-setup"
+        ],
+        "post-update-cmd": [
+            "@php vendor/bin/contao-setup"
+        ]
     }
 }

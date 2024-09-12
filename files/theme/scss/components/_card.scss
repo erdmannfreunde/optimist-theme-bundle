@@ -1,0 +1,56 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/contao-themes/optimist
+// *
+
+//
+// COMPONENTS/CONTACT
+// --------------------------------------------------
+
+.card {
+  @include card;
+
+  color: var(--color-text);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0;
+
+  #{headings()} {
+    @extend %_h4;
+  }
+
+  figure {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: var(--base-spacing-unit);
+
+    img {
+      margin-left: 0;
+    }
+  }
+
+  .rte {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .btn {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+}

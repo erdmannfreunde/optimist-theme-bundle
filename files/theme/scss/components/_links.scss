@@ -1,0 +1,112 @@
+// *
+// * Erdmann & Freunde
+// * OPTIMIST Contao Theme
+// * erdmann-freunde.de/contao-themes/optimist
+// *
+
+//
+// COMPONENTS/LINKS
+// --------------------------------------------------
+
+@import '../../../assets/nutshell/scss/components/links';
+
+// --------------------------------------------------
+
+a {
+  color: var(--links-color);
+
+  &:hover {
+    --links-color: var(--links-color-hover);
+  }
+}
+
+// [1] fix button gradient in chrome
+%button {
+  border: none; // [1]
+}
+
+%button--primary {
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+  transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+
+  &:hover {
+    -webkit-box-shadow: var(--button-shadow-primary);
+            box-shadow: var(--button-shadow-primary);
+    -webkit-box-shadow: var(--button-primary-shadow);
+            box-shadow: var(--button-primary-shadow);
+  }
+
+  p & {
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+}
+
+%button--secondary {
+  border-radius: var(--button-border-radius);
+  color: var(--button-color-secondary);
+  border: var(--button-border-width) solid var(--button-background-secondary);
+  background: var(--button-background-secondary);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+
+  &:hover {
+    --button-background-secondary: var(--button-background-secondary-hover);
+  }
+
+  p & {
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+}
+// btn--primary & btn--secondary
+a,
+span,
+button {
+  &.btn--primary {
+    @extend %button--primary;
+  }
+
+  &.btn--secondary {
+    @extend %button--secondary;
+  }
+}
+
+// [2] button used in a .article--highlight container
+div {
+  &.btn--primary {
+    a {
+      @extend %button--primary;
+
+      .article--highlight & {
+        // [2]
+        --button-background: var(--button-background-highlight);
+        --button-color: var(--button-color-highlight);
+
+        &:hover {
+          --button-background: var(--button-background-highlight-hover);
+        }
+      }
+    }
+  }
+
+  &.btn--secondary {
+    a {
+      @extend %button--secondary;
+
+      &:hover {
+        --button-background-secondary: var(--button-background-secondary-hover);
+      }
+    }
+  }
+}
+
+.back {
+  a {
+    @extend %button;
+    @extend %button--secondary;
+  }
+}
