@@ -8,7 +8,11 @@ OPTIMIST ist ein kostenloses Contao Theme für einfache Websites.
 ## 1. Voraussetzungen und Abhängigkeiten
 
 - Contao 5.3 LTS
-- [nutshell-framework/assets](https://github.com/nutshell-framework/assets) & [contao-grid-bundle](https://github.com/erdmannfreunde/contao-grid-bundle) (werden mit dem Theme installiert)
+- [nutshell-framework/assets](https://github.com/nutshell-framework/assets)
+- [contao-grid-bundle](https://github.com/erdmannfreunde/contao-grid-bundle)
+- [contao-ping-bundle](https://github.com/erdmannfreunde/contao-ping-bundle)
+
+(werden mit dem Theme installiert)
 
 ## 2. Download & Installation
 
@@ -16,7 +20,9 @@ Wie du das Theme installierst, erfährst du in dieser [Video-Anleitung](https://
 
 ## 3. Tipps für Einsteiger
 
-Für Einsteiger haben wir [Tipps zum Einstieg in OPTIMIST](https://erdmann-freunde.de/contao-themes/optimist/anmeldung-tipps-einstieg) zusammengestellt.
+Du möchtest wissen, wie du die Farben und Schriften änderst, Abstände anpasst oder das Grid verwendest? Dann melde dich für den kostenlosen Kurs „Bessere Websites mit OPTIMIST“ an:
+
+[Zur Anmeldung](https://erdmann-freunde.de/optimist-kurs)
 
 ## 4. CSS-Klassen Übersicht
 

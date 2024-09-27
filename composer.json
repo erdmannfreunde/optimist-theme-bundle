@@ -2,7 +2,7 @@
     "name": "erdmannfreunde/optimist-theme-bundle",
     "type": "contao-theme",
     "description": "OPTIMIST Theme Bundle",
-    "homepage": "https://erdmann-freunde.de/produkte/contao-themes/optimist",
+    "homepage": "https://erdmann-freunde.de/contao-themes/optimist",
     "keywords": [
         "contao",
         "erdmannfreunde",
@@ -18,7 +18,7 @@
         }
     ],
     "support": {
-        "homepage": "https://erdmann-freunde.de/produkte/contao-themes/optimist",
+        "homepage": "https://erdmann-freunde.de/contao-themes/optimist",
         "issues": "https://github.com/erdmannfreunde/optimist-theme-bundle/issues",
         "source": "https://github.com/erdmannfreunde/optimist-theme-bundle"
     },
@@ -34,7 +34,8 @@
         "contao/newsletter-bundle": "^5.3",
         "nutshell-framework/nutshell": "^2.0",
         "erdmannfreunde/contao-grid-bundle": "^2.0",
-        "erdmannfreunde/theme-toolbox": "^3.0"
+        "erdmannfreunde/theme-toolbox": "^3.0",
+        "erdmannfreunde/contao-ping-bundle": "^1.0"
     },
     "extra": {
         "contao-component-dir": "assets"
