@@ -27,16 +27,23 @@ a {
 
 %button--primary {
   text-decoration: none;
-  -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
-  transition: background-color 0.3s, -webkit-box-shadow 0.3s;
-  transition: background-color 0.3s, box-shadow 0.3s;
-  transition: background-color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  -webkit-transition:
+    background-color 0.3s,
+    -webkit-box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    -webkit-box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s,
+    -webkit-box-shadow 0.3s;
 
   &:hover {
     -webkit-box-shadow: var(--button-shadow-primary);
             box-shadow: var(--button-shadow-primary);
-    -webkit-box-shadow: var(--button-primary-shadow);
-            box-shadow: var(--button-primary-shadow);
   }
 
   p & {

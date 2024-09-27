@@ -19,8 +19,8 @@
   --color-gray-light: #cfd8dc;
   --color-gray-lighter: #fafcff;
   --color-purple-dark: #9041ff;
-  --color-purple: #6e46ae;
-  --color-purple-light: #bf6cff;
+  --color-purple: #9a5be8;
+  --color-purple-light: #8860c7;
   --color-purple-lighter: rgba(191, 108, 255, 0.075);
   --color-teal-dark: hsl(166deg, 72%, 38%);
   --color-teal: hsl(166deg, 72%, 48%);
@@ -162,16 +162,8 @@
   --links-color: var(--color-brand-secondary);
   --links-color-hover: var(--color-brand-secondary-dark);
   --button-color: var(--color-text-inverted);
-  --button-background: linear-gradient(
-    45deg,
-    var(--color-brand-primary) 0,
-    var(--color-brand-primary-light) 100%
-  );
-  --button-background-hover: linear-gradient(
-    -135deg,
-    var(--color-brand-primary) 0,
-    var(--color-brand-primary-dark) 100%
-  );
+  --button-background: var(--color-brand-primary-dark);
+  --button-background-hover: var(--color-brand-primary);
   --button-spacing: var(--base-spacing-unit-xs) var(--base-spacing-unit);
   --button-border-radius: 2rem;
   --button-shadow-primary: 0 10px 40px 0 rgba(50, 50, 50, 0.25);
