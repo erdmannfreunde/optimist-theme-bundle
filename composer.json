@@ -10,7 +10,6 @@
         "theme"
     ],
     "license": "LGPL-3.0-or-later",
-    "version": "3.0.0",
     "authors": [
         {
             "name": "Erdmann & Freunde",
@@ -38,7 +37,8 @@
         "erdmannfreunde/contao-ping-bundle": "^1.0"
     },
     "extra": {
-        "contao-component-dir": "assets"
+        "contao-component-dir": "assets",
+        "theme-order-id": "free"
     },
     "scripts": {
         "post-install-cmd": [
