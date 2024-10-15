@@ -36,11 +36,7 @@
   .header {
     @extend %_h5;
 
-    margin-top: 0;
-
-    &:not(.first) {
-      margin-top: var(--base-spacing-unit-lg);
-    }
+    margin-top: var(--base-spacing-unit-lg);
   }
 
   .layout_list,

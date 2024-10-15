@@ -45,6 +45,60 @@
   }
 }
 
+.content-text {
+  &.media--left,
+  &.media--right {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    figure {
+      position: relative;
+      margin-bottom: var(--grid-gutter);
+
+      @include media-query(screen-sm) {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 40%;
+                flex: 0 1 40%;
+        margin-bottom: 0;
+      }
+    }
+
+    .rte {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 calc(60% - var(--grid-gutter));
+              flex: 1 0 calc(60% - var(--grid-gutter));
+    }
+  }
+
+  &.media--left {
+    figure {
+      @include media-query(screen-sm) {
+        margin-right: var(--grid-gutter);
+      }
+    }
+  }
+
+  &.media--right {
+    figure {
+      @include media-query(screen-sm) {
+        margin-left: var(--grid-gutter);
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+      }
+    }
+  }
+
+  figcaption {
+    font-size: var(--base-font-size-xs);
+    font-style: italic;
+  }
+}
+
+// für news und event-listen
 .ce_text {
   overflow: visible;
 
