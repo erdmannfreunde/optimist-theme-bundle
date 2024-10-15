@@ -1,7 +1,7 @@
 {
     "name": "erdmannfreunde/optimist-theme-bundle",
     "type": "contao-theme",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "OPTIMIST Theme Bundle",
     "homepage": "https://erdmann-freunde.de/contao-themes/optimist",
     "keywords": [

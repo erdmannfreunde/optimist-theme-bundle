@@ -1,5 +1,10 @@
 # CHANGELOG:
 
+## 3.0.2 (15.10.2024)
+
+- Anweisungen für Text mit Bild für Contao 5 optimiert (Danke Christina)
+- Demo-Daten um Text mit Bild ergänzt
+
 ## 3.0.1 (07.10.2024)
 
 - Kurs [Bessere Websites mit OPTIMIST](https://erdmann-freunde.de/optimist-kurs) ergänzt
