@@ -12,7 +12,7 @@ OPTIMIST ist ein kostenloses Contao Theme für einfache Websites.
 - [contao-grid-bundle](https://github.com/erdmannfreunde/contao-grid-bundle)
 - [contao-ping-bundle](https://github.com/erdmannfreunde/contao-ping-bundle)
 
-(werden mit dem Theme installiert)
+Die Erweiterungen automatisch bei Installation des Themes mitinstalliert. Bei der Installation der Ping-Erweiterung werden Informationen über Domain, Version des Themes und Datum der Installation (bzw. Aktualisierung) an uns übermittelt. 
 
 ## 2. Download & Installation
 
@@ -63,21 +63,6 @@ Du möchtest wissen, wie du die Farben und Schriften änderst, Abstände anpasst
 |                   | `border-top`                      | Fügt dem Element/Artikel einen Rahmen oben hinzu                                                                                                                                                                                                                                                  | trumps/\_helper                    |
 |                   | `border-bottom`                   | Fügt dem Element/Artikel einen Rahmen unte hinzu                                                                                                                                                                                                                                                  | trumps/\_helper                    |
 |                   | `block--center`                   | Platziert das Element mittig (margin-left/-right: auto)                                                                                                                                                                                                                                           | trumps/\_helper                    |
-
-## 5. Optimist über Composer aktualisieren
-
-Ein Upload über den Contao Manager führt dazu, dass sich Contao nicht mehr ohne weitere Vorkehrungen über Composer aktualisieren lässt. Dies lässt sich erreichen, indem man in der composer.json im Projektverzeichnis folgende Angaben ergänzt:
-
-```
-"repositories": {
-  "erdmannfreunde/optimist-theme-bundle": {
-    "type": "artifact",
-    "url": "contao-manager/packages/"
-  }
-}
-```
-
-**Erklärung:** Bei dem Upload über den CM handelt es sich um ein sogenanntes Artefakt. Dieses lässt sich als Repository über Composer laden. (Danke [Christian](https://github.com/contaoacademy))
 
 ## Development notes:
 
