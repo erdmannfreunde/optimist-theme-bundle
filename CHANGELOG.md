@@ -1,5 +1,10 @@
 # CHANGELOG:
 
+## 3.0.3 (29.19.2024)
+
+- die Menü-Breakpoints nutzen die `$max-diff` Variable
+- Hinweis auf Ping in der README ergänzt
+
 ## 3.0.2 (15.10.2024)
 
 - Anweisungen für Text mit Bild für Contao 5 optimiert (Danke Christina)
