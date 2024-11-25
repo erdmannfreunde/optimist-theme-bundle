@@ -1,6 +1,10 @@
 # CHANGELOG:
 
-## 3.0.3 (29.19.2024)
+## 3.0.4 (25.11.2024)
+
+- Aufräumarbeiten: Verwaiste Dateien entfernt, Kommentare aktualisiert
+
+## 3.0.3 (29.10.2024)
 
 - die Menü-Breakpoints nutzen die `$max-diff` Variable
 - Hinweis auf Ping in der README ergänzt

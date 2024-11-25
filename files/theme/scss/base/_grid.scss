@@ -4,7 +4,6 @@
 // * erdmann-freunde.de/contao-themes/optimist
 // *
 
-
 //
 // BASE/GRID
 // --------------------------------------------------
@@ -14,7 +13,7 @@
 // --------------------------------------------------
 
 .row {
-  grid-row-gap: var(--grid-gutter);
+  row-gap: var(--grid-gutter);
 }
 
 .row-start {
