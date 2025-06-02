@@ -1,5 +1,10 @@
 # CHANGELOG:
 
+## 3.0.5 (02.06.2025)
+
+- Aufräumarbeiten
+- „support.homepage“ in composer.json entfernt
+
 ## 3.0.4 (25.11.2024)
 
 - Aufräumarbeiten: Verwaiste Dateien entfernt, Kommentare aktualisiert
