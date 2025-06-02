@@ -12,9 +12,6 @@
             "homepage": "https://erdmann-freunde.de"
         }
     ],
-    "support": {
-        "homepage": "https://erdmann-freunde.de"
-    },
     "require": {
         "php": ">=7.1",
         "composer-plugin-api": "^2.0",
